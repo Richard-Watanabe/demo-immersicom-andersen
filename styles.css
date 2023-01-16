@@ -1,0 +1,709 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+}
+
+body{
+  overflow:hidden;
+}
+
+.background{
+    background: url(./assets/Background-From-Movie.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+        position: absolute;
+    width:100vw;
+    height:100vh;
+    display:none;
+}
+
+.movie-container{
+    position:absolute;
+    width: 100vw;
+    height:100vh;
+    z-index: 2;
+    object-fit: contain;
+}
+
+.movie {
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.phone {
+  height: 100vh;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-two{
+    height: 100vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+    .phone-three {
+      height: 100vh;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+.phone-screen {
+  background-color: transparent;
+  width: 324px;
+  height:635px;
+  position: relative;
+  top:10px;
+  z-index:3;
+  border-radius:20px;
+  left:65px;
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+
+.phone-screen-two {
+  background-color: transparent;
+  width: 327px;
+  height: 637px;
+  position: relative;
+  top: 6px;
+  z-index: 3;
+  border-radius: 20px;
+  left: -50px;
+  overflow-y:auto;
+  overflow-x: hidden;
+}
+
+.phone-screen-three {
+  background-color: transparent;
+  width: 322px;
+  height: 635px;
+  position: relative;
+  top: 6px;
+  z-index: 3;
+  border-radius: 20px;
+  left: -49px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.exterior-color-border{
+  height:55px;
+  width:87px;
+  position:absolute;
+  top:175px;
+  left:191px;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+@-webkit-keyframes borderBlink {
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: #82AA6F
+  }
+}
+
+@keyframes borderBlink {
+  from,
+  to {
+    border-color:transparent;
+  }
+
+  50% {
+    border-color:#82AA6F
+  }
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+.borderBlink {
+  border: 2px solid #82AA6F;
+    height: 62px;
+      width: 102px;
+      position: absolute;
+      z-index:8;
+
+      border-radius: 10px;
+      cursor: pointer;
+        -webkit-animation: borderBlink 1s step-end infinite;
+          animation: borderBlink 1s step-end infinite;
+          background-color: transparent;
+  /* add 'border-color: transparent' if you wish no border to show initially */
+}
+
+.first-door-highlight {
+  border: 2px solid #82AA6F;
+  height: 216px;
+  width: 191px;
+  position: absolute;
+  z-index: 8;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-animation: borderBlink 1s step-end infinite;
+  animation: borderBlink 1s step-end infinite;
+  background-color: transparent;
+  top: 110px;
+    left: 65px;
+  /* add 'border-color: transparent' if you wish no border to show initially */
+}
+
+.third-grille-highlight{
+  border: 2px solid #82AA6F;
+  height: 43.5px;
+  width: 52px;
+  position: absolute;
+  z-index: 8;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-animation: borderBlink 1s step-end infinite;
+  animation: borderBlink 1s step-end infinite;
+  background-color: transparent;
+}
+
+.third-colonial-highlight {
+  top: 407.5px;
+  left: 270.5px;
+}
+
+.farmhouse-highlight{
+    top: 408px;
+      left: 73px;
+}
+
+.color-blink{
+  position: absolute;
+    z-index: 8;
+          top: 200px;
+            left: 220px;
+}
+
+.color-container{
+  position:absolute;
+  z-index:6;
+  width:100%;
+  height:100%;
+  overscroll-behavior-x: contain;
+  /* overflow:hidden; */
+}
+
+.second-container {
+  position: absolute;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  overscroll-behavior-x: contain;
+  overflow-x:hidden;
+  overflow-y:hidden;
+}
+
+.third-container {
+  position: absolute;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  overscroll-behavior-x: contain;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.color-background{
+    position: absolute;
+    z-index: 6;
+    width:100%;
+}
+
+.color-background-two{
+position: absolute;
+  z-index: 6;
+  width: 100%;
+}
+
+.second-background {
+  position: absolute;
+  z-index: 6;
+  width: 100%;
+}
+
+.third-background {
+  position: absolute;
+  z-index: 6;
+  width: 100%;
+}
+
+.circle-highlight{
+position: absolute;
+  background-color: transparent;
+  z-index: 6;
+  width: 44px;
+  height: 44px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  border: 2px solid #82AA6F;
+  -webkit-animation: borderBlink 1s step-end infinite;
+  animation: borderBlink 1s step-end infinite;
+}
+
+.grill-highlight {
+  position: absolute;
+  background-color: transparent;
+  z-index: 13;
+  width: 88px;
+  height: 89px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 2px solid #82AA6F;
+  -webkit-animation: borderBlink 1s step-end infinite;
+  animation: borderBlink 1s step-end infinite;
+}
+
+.door-highlight{
+  position: absolute;
+    background-color: transparent;
+    z-index: 13;
+    width: 122px;
+    height: 135px;
+    border: 2px solid #82AA6F;
+    -webkit-animation: borderBlink 1s step-end infinite;
+    animation: borderBlink 1s step-end infinite;
+}
+
+.door-selected {
+  position: absolute;
+  background-color: transparent;
+  z-index: 13;
+  width: 115px;
+  height: 134px;
+  border: 2px solid #82AA6F;
+}
+
+.brown-door-selected{
+  top:17px;
+  left:8px;
+}
+
+.door-three-selected{
+  top: 17px;
+    left: 255px;
+    width:122px;
+    height: 136px;
+}
+
+.door-three-highlight{
+  top: 18px;
+  left: 255px;
+}
+
+.save-highlight {
+  position: absolute;
+  background-color: transparent;
+  z-index: 13;
+  width: 198px;
+  height: 46px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  border: 3px solid #82AA6F;
+  -webkit-animation: borderBlink 1s step-end infinite;
+  animation: borderBlink 1s step-end infinite;
+  top: 440px;
+    left: 65px;
+}
+
+.prairie-highlight{
+      top: 9px;
+        left: 105px;
+}
+
+.grill-selected{
+  position: absolute;
+    background-color: transparent;
+    z-index: 13;
+    width: 88px;
+    height: 89px;
+        -moz-border-radius: 10px;
+          -webkit-border-radius: 10px;
+          border-radius: 10px;
+          border: 2px solid #82AA6F;
+}
+
+.prairie-selected{
+    top: 8px;
+      left: 106px;
+}
+
+.modified-selected {
+  top: 4px;
+  left: 302px;
+}
+
+.modified-colonial-highlight {
+    top: 5px;
+      left: 302px;
+}
+
+.colonial-highlight{
+  top: 6px;
+    left: 204px;
+}
+
+.colonial-selected{
+  top: 6px;
+    left: 204px;
+}
+
+.black-highlight{
+    top: 469px;
+    left: 213px;
+}
+
+.wine-highlight-decoy {
+  top: 546px;
+  left: 213.5px;
+  z-index:7;
+  opacity:0;
+}
+
+.wine-highlight {
+  top: 158px;
+  left: 212px;
+  z-index: 7;
+}
+
+.double-door-red-highlight {
+  top: 158px;
+  left: 213px;
+  z-index: 7;
+}
+
+.double-door-green-highlight {
+  top: 200px;
+  left: 131px;
+  z-index: 7;
+}
+
+.double-door-stains-highlight {
+  top: 283px;
+  left: 11px;
+  z-index: 7;
+}
+
+.gray-highlight {
+  top: 388px;
+  left: 131.5px;
+}
+
+.stains-default-highlight {
+  top: 541px;
+  left: 10.5px;
+}
+
+.stains-walnut-highlight {
+  top: 540px;
+  left: 92.5px;
+}
+
+.red-arrow{
+  position:absolute;
+  z-index: 7;
+    top: 249.5px;
+    left: 301px;
+}
+
+.scroll-arrow {
+  position: absolute;
+  z-index: 7;
+  top: 0px;
+  left: 141px;
+  width:40px;
+  height: 110px;
+  /* animation: blink-animation 2s steps(5, start) infinite;
+    -webkit-animation: blink-animation 2s steps(5, start) infinite; */
+}
+
+.red-arrow-div{
+    position: absolute;
+      z-index: 7;
+    width: 15px;
+      height: 20px;
+        animation: blink-animation 1s steps(5, start) infinite;
+          -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+.full-icon {
+  position: absolute;
+  z-index: 7;
+  top: 140px;
+  left: 251px;
+}
+
+.full-icon-div {
+  position: absolute;
+  z-index: 7;
+    width: 70px;
+      height: 50px;
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+.finish-div {
+  position: absolute;
+  z-index: 7;
+  top: 503px;
+  left: 223px;
+}
+
+.finish-icon {
+  position: absolute;
+  z-index: 7;
+  width: 80px;
+  height: 60px;
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+.configure {
+  position: absolute;
+  z-index: 7;
+  top: 405px;
+  left: 239.5px;
+  width: 79px;
+  height: 20px;
+}
+
+.configure-img {
+  position: absolute;
+  z-index: 7;
+  width: 79px;
+  height: 20px;
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+.configure-second {
+  position: absolute;
+  z-index: 7;
+  top: 400px;
+  left: 241px;
+}
+
+.configure-img-second {
+  position: absolute;
+  z-index: 7;
+  width: 79px;
+  height: 20px;
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+.saved {
+  position: absolute;
+  z-index: 7;
+  top: 410px;
+  left: 22px;
+}
+
+.saved-img {
+  position: absolute;
+  z-index: 7;
+  width: 53px;
+  height: 16px;
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+.upload {
+  position: absolute;
+  z-index: 7;
+  top: 10px;
+  left: 277px;
+}
+
+.upload-icon {
+  position: absolute;
+  z-index: 7;
+  width: 25px;
+  height:26px;
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+.nav{
+  width:100%;
+  height:100%;
+  position:absolute;
+  z-index:6;
+}
+
+.nav-img{
+  position: absolute;
+    z-index: 6;
+    width:645px;
+    top:220px;
+    transition: transform 0.5s;
+    -webkit-animation-name: cssAnimation;
+      -webkit-animation-duration: 1s;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-timing-function: ease;
+      -webkit-animation-fill-mode: forwards;
+}
+
+.grill-list {
+  overflow: hidden;
+  position: absolute;
+  z-index: 6;
+  width: 399px;
+  /* overflow: scroll; */
+    /* height: 130px;
+      left: -1px;
+      top: 374px; */
+}
+
+.door-list {
+  overflow: hidden;
+  position: absolute;
+  z-index: 6;
+  width: 520px;
+  /* overflow: scroll; */
+  /* height: 130px;
+      left: -1px;
+      top: 374px; */
+}
+
+@-webkit-keyframes cssAnimation {
+  from {
+    -webkit-transform: translate(0px);
+  }
+
+  to {
+    -webkit-transform: translate(-50%);
+  }
+}
+
+.grill-blink{
+  position:absolute;
+  z-index:8;
+  top: 223px;
+  left: 215px;
+  width: 102px;
+}
+
+.scroll{
+
+  width: 390px;
+  height:130px;
+    left: -1px;
+      top: 374px;
+  position:absolute;
+  z-index:12;
+  background-color;
+  -webkit-overflow-scrolling: touch;
+  background-color: transparent;
+}
+
+.scroll-two{
+
+  width: 520px;
+  height: 155px;
+  left: -1px;
+  top: 432px;
+  position: absolute;
+  z-index: 12;
+  background-color;
+  -webkit-overflow-scrolling: touch;
+  background-color: transparent;
+}
+
+.door-list {
+  overflow: hidden;
+  position: absolute;
+  z-index: 6;
+  width: 520px;
+  /* overflow: scroll; */
+  /* height: 130px;
+      left: -1px;
+      top: 374px; */
+}
+
+.backpatch{
+  width: 400px;
+    height: 120px;
+    left: -1px;
+    position: absolute;
+      z-index: 4;
+ overflow-x: hidden;
+}
+
+.backpatch:-webkit-scrollbar {
+  display: none;
+}
+
+.nav-container{
+  overflow:hidden;
+}
+
+.nav-bar{
+  width:350px;
+  height:60px;
+  position: absolute;
+  z-index:7;
+  top:575px;
+  overflow:hidden;
+  right:-15px;
+}
+
+.nav-bar-two {
+  width: 350px;
+  height: 60px;
+  position: absolute;
+  z-index: 7;
+  top: 585px;
+  overflow: hidden;
+  right: -10px;
+}
+
+.color-container-two{
+    background-color: white;
+      width: 327px;
+      height: 420px;
+      position: relative;
+      top: 427px;
+      z-index: 6;
+      overflow-y: auto;
+      overflow-x: hidden;
+}
+
+.hide{
+  display:none;
+}
