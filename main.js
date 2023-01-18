@@ -1,9 +1,13 @@
 var firstMovie = document.querySelector(".first-movie");
 var secondMovie = document.querySelector(".second-movie")
 var thirdMovie = document.querySelector(".third-movie")
+var fourthMovie = document.querySelector(".fourth-movie")
+var fourthHalfMovie = document.querySelector(".fourth-movie-half")
+var finalMovie = document.querySelector(".final-movie")
 var phone = document.querySelector(".phone");
 var phoneTwo = document.querySelector(".phone-two");
 var phoneThree = document.querySelector(".phone-three");
+var phoneFour = document.querySelector(".phone-four")
 var borderBlink = document.querySelector(".borderBlink")
 var colorContainer = document.querySelector('.color-container')
 var secondContainer = document.querySelector('.second-container')
@@ -11,6 +15,8 @@ var colorBackground = document.querySelector('.color-background')
 var secondBackground = document.querySelector('.second-background')
 var thirdContainer = document.querySelector(".third-container")
 var thirdBackground = document.querySelector(".third-background")
+var fourthContainer = document.querySelector(".fourth-container")
+var fourthBackground = document.querySelector(".fourth-background")
 var blackHighlight = document.querySelector('.black-highlight')
 var grayHighlight = document.querySelector('.gray-highlight')
 var wineHighlight = document.querySelector('.wine-highlight')
@@ -21,6 +27,7 @@ var redArrow = document.querySelector('.red-arrow')
 var nav = document.querySelector('.nav')
 var navBar = document.querySelector('.nav-bar')
 var navBarTwo = document.querySelector('.nav-bar-two')
+var navBarFour = document.querySelector(".nav-bar-four")
 var navImg = document.querySelector('.nav-img')
 var grillBlinkContainer = document.querySelector('.grill-blink-container')
 var grillBlink = document.querySelector('.grill-blink')
@@ -41,7 +48,10 @@ var saveHighlight = document.querySelector('.save-highlight')
 var firstDoorHighlight = document.querySelector(".first-door-highlight")
 var configure = document.querySelector('.configure')
 var configureSecond = document.querySelector(".configure-second")
+var configureFourth = document.querySelector(".configure-four-div")
 var saved = document.querySelector(".saved")
+var savedFour = document.querySelector(".saved-four-div")
+var savedFourGray = document.querySelector(".saved-four-gray-div")
 var colorContainerTwo = document.querySelector(".color-container-two")
 var colorBackgroundTwo = document.querySelector(".color-background-two")
 var brownDoorSelected = document.querySelector(".brown-door-selected")
@@ -53,16 +63,674 @@ var doubleDoorRedHighlight = document.querySelector(".double-door-red-highlight"
 var doubleDoorGreenHighlight = document.querySelector(".double-door-green-highlight")
 var doubleDoorStainsHighlight = document.querySelector(".double-door-stains-highlight")
 var upload = document.querySelector(".upload")
+var uploadFour = document.querySelector(".upload-four-div")
+var uploadFourFinal = document.querySelector(".upload-four-div-final")
 var thirdColonialHighlight = document.querySelector(".third-colonial-highlight")
 var farmhouseHighlight = document.querySelector(".farmhouse-highlight")
 var finishDiv = document.querySelector(".finish-div")
+var initialWindowHighlight = document.querySelector(".initial-window-highlight")
+var blackWindowHighlight = document.querySelector(".black-window-highlight")
+var whiteWindowHighlight = document.querySelector(".white-window-highlight")
+var grayWindowHighlight = document.querySelector(".gray-window-highlight")
+var canvasHighlight = document.querySelector(".canvas-highlight")
+var pineHighlight = document.querySelector(".pine-highlight")
+var whiteInteriorHighlight = document.querySelector(".white-interior-highlight")
+var backBtn = document.querySelector(".back")
+var playBtn = document.querySelector(".play")
+var pauseBtn = document.querySelector(".pause")
+var nextBtn = document.querySelector(".next")
+var windowBtnOne = document.querySelector(".window-btn-one")
+var windowBtnTwo = document.querySelector(".window-btn-two")
+var doorBtnOne = document.querySelector(".door-btn-one")
+var doorBtnTwo = document.querySelector(".door-btn-two")
 
-firstMovie.addEventListener('ended', (event) =>{
+firstMovie.playbackRate = 10.0
+secondMovie.playbackRate = 10.0
+thirdMovie.playbackRate = 10.0
+fourthMovie.playbackRate = 10.0
+fourthHalfMovie.playbackRate = 10.0
+finalMovie.playbackRate = 10.0
+
+Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
+  get: function () {
+    return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
+  }
+})
+
+var moviePlaying = "first"
+
+backBtn.addEventListener('click', (event) => {
+  backBtn.style.opacity = '1';
+  window.setTimeout("backBtn.style.opacity='0';", 50);
+  if (moviePlaying === "third") {
+    playBtn.style.pointerEvents = ""
+    secondMovie.pause()
+    secondMovie.currentTime = 0;
+    phone.classList.add('hide');
+    phoneTwo.classList.add('hide');
+    phoneThree.classList.add('hide')
+    phoneFour.classList.add('hide')
+    firstMovie.classList.add('hide')
+    firstMovie.pause()
+    secondMovie.classList.remove('hide')
+    thirdMovie.classList.add('hide')
+    thirdMovie.pause()
+    fourthMovie.classList.add('hide')
+    fourthMovie.pause()
+    fourthHalfMovie.classList.add('hide')
+    fourthHalfMovie.pause()
+    finalMovie.classList.add('hide')
+    finalMovie.pause()
+    playBtn.classList.remove('hide');
+    pauseBtn.classList.add('hide')
+    moviePlaying = "second"
+    navBarTwo.classList.add('hide')
+    secondContainer.classList.add('hide')
+    secondBackground.classList.remove('hide')
+    configure.classList.add('hide')
+    configureSecond.classList.add('hide')
+    saved.classList.add('hide')
+    upload.classList.add('hide')
+    colorContainerTwo.classList.add('hide')
+    wineHighlightDecoy.classList.add('hide')
+    wineHighlight.classList.add('hide')
+    doubleDoorRedHighlight.classList.add('hide')
+    doubleDoorGreenHighlight.classList.add('hide')
+    doubleDoorStainsHighlight.classList.add('hide')
+    scrollArrow.classList.add('hide')
+    scrollDivTwo.classList.add('hide')
+    brownDoorSelected.classList.add('hide')
+    doorThreeHighlight.classList.add('hide')
+    doorThreeSelected.classList.add('hide')
+    doorList.classList.add('hide')
+    secondContainer.classList.add('hide')
+    colorBackgroundTwo.classList.remove('hide')
+    colorBackgroundTwo.src = "./assets/default-color-two.png"
+    secondBackground.src = "./assets/initial-two.png"
+    firstDoorHighlight.classList.remove('hide')
+    scrollArrow.style.top = "0px"
+    doorBtnTwo.style.opacity = "1"
+    doorBtnOne.style.opacity = "0"
+    windowBtnOne.style.opacity = "0"
+    windowBtnTwo.style.opacity = "0"
+  } else if (moviePlaying === "fourth"
+  || moviePlaying === "fourthHalf"
+  || moviePlaying === "final") {
+    playBtn.style.pointerEvents = ""
+    thirdMovie.pause()
+    thirdMovie.currentTime = 0;
+    phone.classList.add('hide');
+    phoneTwo.classList.add('hide');
+    phoneThree.classList.add('hide')
+    phoneFour.classList.add('hide')
+    firstMovie.classList.add('hide')
+    firstMovie.pause()
+    secondMovie.classList.add('hide')
+    secondMovie.pause();
+    thirdMovie.classList.remove('hide')
+    fourthMovie.classList.add('hide')
+    fourthMovie.pause()
+    fourthHalfMovie.classList.add('hide')
+    fourthHalfMovie.pause()
+    finalMovie.classList.add('hide')
+    finalMovie.pause()
+    playBtn.classList.remove('hide');
+    pauseBtn.classList.add('hide')
+    moviePlaying = "third"
+    thirdColonialHighlight.classList.remove('hide')
+    thirdContainer.classList.add("hide")
+    thirdBackground.classList.remove("hide")
+    thirdBackground.src = "./assets/colonial-grille.png"
+    farmhouseHighlight.classList.add("hide")
+    finishDiv.classList.add("hide")
+    windowBtnOne.style.opacity = "1"
+    windowBtnTwo.style.opacity = "0"
+    doorBtnOne.style.opacity = "0"
+    doorBtnTwo.style.opacity = "0"
+  } else if (moviePlaying === "first") {
+    playBtn.style.pointerEvents = ""
+    fourthMovie.pause()
+    fourthMovie.currentTime = 0;
+    phone.classList.add('hide');
+    phoneTwo.classList.add('hide');
+    phoneThree.classList.add('hide')
+    phoneFour.classList.add('hide')
+    firstMovie.classList.add('hide')
+    firstMovie.pause()
+    secondMovie.classList.add('hide')
+    secondMovie.pause();
+    thirdMovie.classList.add('hide')
+    thirdMovie.pause()
+    fourthMovie.classList.remove('hide')
+    fourthHalfMovie.classList.add('hide')
+    fourthHalfMovie.pause()
+    finalMovie.classList.add('hide')
+    finalMovie.pause()
+    playBtn.classList.remove('hide');
+    pauseBtn.classList.add('hide')
+    moviePlaying = "fourth"
+    navBarFour.classList.add('hide')
+    initialWindowHighlight.classList.remove('hide')
+    fourthContainer.classList.add('hide')
+    fourthBackground.src = "./assets/initial-window.png"
+    fourthBackground.classList.remove('hide')
+    blackWindowHighlight.classList.add('hide')
+    whiteWindowHighlight.classList.add('hide')
+    grayWindowHighlight.classList.add('hide')
+    canvasHighlight.classList.add('hide')
+    pineHighlight.classList.add('hide')
+    whiteInteriorHighlight.classList.add('hide')
+    savedFour.classList.add('hide')
+    savedFourGray.classList.add('hide')
+    uploadFour.classList.add('hide')
+    uploadFourFinal.classList.add('hide')
+    configureFourth.classList.add('hide')
+    windowBtnTwo.style.opacity = "1"
+    doorBtnTwo.style.opacity = "0"
+    doorBtnOne.style.opacity = "0"
+    windowBtnOne.style.opacity = "0"
+  } else if (moviePlaying === "second") {
+    playBtn.style.pointerEvents = ""
+    firstMovie.pause();
+    firstMovie.currentTime = 0;
+    phone.classList.add('hide');
+    phoneTwo.classList.add('hide');
+    phoneThree.classList.add('hide')
+    phoneFour.classList.add('hide')
+    firstMovie.classList.remove('hide')
+    secondMovie.classList.add('hide')
+    secondMovie.pause()
+    thirdMovie.classList.add('hide')
+    thirdMovie.pause()
+    fourthMovie.classList.add('hide')
+    fourthMovie.pause()
+    fourthHalfMovie.classList.add('hide')
+    fourthHalfMovie.pause()
+    finalMovie.classList.add('hide')
+    finalMovie.pause()
+    playBtn.classList.remove('hide');
+    pauseBtn.classList.add('hide')
+    moviePlaying = "first"
+    navBar.classList.add('hide')
+    colorContainer.classList.add('hide')
+    blackHighlight.classList.remove('hide');
+    grayHighlight.classList.add('hide')
+    stainsDefaultHighlight.classList.add('hide')
+    stainsWalnutHighlight.classList.add('hide')
+    redArrow.classList.add('hide')
+    navImg.classList.add('hide')
+    grillBlinkContainer.classList.add('hide')
+    scrollDiv.classList.add('hide')
+    prairieHighlight.classList.add('hide')
+    prairieSelected.classList.add('hide')
+    modifiedColonialHighlight.classList.add('hide')
+    modifiedSelected.classList.add('hide')
+    colonialHighlight.classList.add('hide')
+    colonialSelected.classList.add('hide')
+    grillList.classList.add('hide')
+    fullIcon.classList.add('hide')
+    saveHighlight.classList.add('hide')
+    backpatch.classList.remove('hide')
+    colorBackground.classList.remove('hide')
+    initialContainer.classList.remove('hide')
+    colorBlink.classList.remove('hide')
+    grillBlink.classList.remove('hide')
+    colorBackground.src = "./assets/white-door.png"
+    colorContainer.style.overflowX = ""
+    colorContainer.style.overflowY = ""
+    doorBtnOne.style.opacity = "1"
+    doorBtnTwo.style.opacity = "0"
+    windowBtnOne.style.opacity = "0"
+    windowBtnTwo.style.opacity = "0"
+  }
+});
+
+nextBtn.addEventListener('click', (event) => {
+  nextBtn.style.opacity = '1';
+  window.setTimeout("nextBtn.style.opacity='0';", 50);
+  if (moviePlaying === "first") {
+    playBtn.style.pointerEvents = ""
+    secondMovie.pause()
+    secondMovie.currentTime = 0;
+    phone.classList.add('hide');
+    phoneTwo.classList.add('hide');
+    phoneThree.classList.add('hide')
+    phoneFour.classList.add('hide')
+    firstMovie.classList.add('hide')
+    firstMovie.pause()
+    secondMovie.classList.remove('hide')
+    thirdMovie.classList.add('hide')
+    thirdMovie.pause()
+    fourthMovie.classList.add('hide')
+    fourthMovie.pause()
+    fourthHalfMovie.classList.add('hide')
+    fourthHalfMovie.pause()
+    finalMovie.classList.add('hide')
+    finalMovie.pause()
+    playBtn.classList.remove('hide');
+    pauseBtn.classList.add('hide')
+    moviePlaying = "second"
+    navBarTwo.classList.add('hide')
+    secondContainer.classList.add('hide')
+    secondBackground.classList.remove('hide')
+    configure.classList.add('hide')
+    configureSecond.classList.add('hide')
+    saved.classList.add('hide')
+    upload.classList.add('hide')
+    colorContainerTwo.classList.add('hide')
+    wineHighlightDecoy.classList.add('hide')
+    wineHighlight.classList.add('hide')
+    doubleDoorRedHighlight.classList.add('hide')
+    doubleDoorGreenHighlight.classList.add('hide')
+    doubleDoorStainsHighlight.classList.add('hide')
+    scrollArrow.classList.add('hide')
+    scrollDivTwo.classList.add('hide')
+    brownDoorSelected.classList.add('hide')
+    doorThreeHighlight.classList.add('hide')
+    doorThreeSelected.classList.add('hide')
+    doorList.classList.add('hide')
+    secondContainer.classList.add('hide')
+    colorBackgroundTwo.classList.remove('hide')
+    colorBackgroundTwo.src = "./assets/default-color-two.png"
+    secondBackground.src = "./assets/initial-two.png"
+    firstDoorHighlight.classList.remove('hide')
+    scrollArrow.style.top = "0px"
+    doorBtnTwo.style.opacity="1"
+    doorBtnOne.style.opacity="0"
+    windowBtnOne.style.opacity="0"
+    windowBtnTwo.style.opacity="0"
+  } else if (moviePlaying === "second") {
+    playBtn.style.pointerEvents = ""
+    thirdMovie.pause()
+    thirdMovie.currentTime = 0;
+    phone.classList.add('hide');
+    phoneTwo.classList.add('hide');
+    phoneThree.classList.add('hide')
+    phoneFour.classList.add('hide')
+    firstMovie.classList.add('hide')
+    firstMovie.pause()
+    secondMovie.classList.add('hide')
+    secondMovie.pause();
+    thirdMovie.classList.remove('hide')
+    fourthMovie.classList.add('hide')
+    fourthMovie.pause()
+    fourthHalfMovie.classList.add('hide')
+    fourthHalfMovie.pause()
+    finalMovie.classList.add('hide')
+    finalMovie.pause()
+    playBtn.classList.remove('hide');
+    pauseBtn.classList.add('hide')
+    moviePlaying = "third"
+    thirdColonialHighlight.classList.remove('hide')
+    thirdContainer.classList.add("hide")
+    thirdBackground.classList.remove("hide")
+    thirdBackground.src = "./assets/colonial-grille.png"
+    farmhouseHighlight.classList.add("hide")
+    finishDiv.classList.add("hide")
+    windowBtnOne.style.opacity="1"
+    windowBtnTwo.style.opacity="0"
+    doorBtnOne.style.opacity="0"
+    doorBtnTwo.style.opacity="0"
+  } else if (moviePlaying === "third") {
+    playBtn.style.pointerEvents = ""
+    fourthMovie.pause()
+    fourthMovie.currentTime = 0;
+    phone.classList.add('hide');
+    phoneTwo.classList.add('hide');
+    phoneThree.classList.add('hide')
+    phoneFour.classList.add('hide')
+    firstMovie.classList.add('hide')
+    firstMovie.pause()
+    secondMovie.classList.add('hide')
+    secondMovie.pause();
+    thirdMovie.classList.add('hide')
+    thirdMovie.pause()
+    fourthMovie.classList.remove('hide')
+    fourthHalfMovie.classList.add('hide')
+    fourthHalfMovie.pause()
+    finalMovie.classList.add('hide')
+    finalMovie.pause()
+    playBtn.classList.remove('hide');
+    pauseBtn.classList.add('hide')
+    moviePlaying = "fourth"
+    navBarFour.classList.add('hide')
+    initialWindowHighlight.classList.remove('hide')
+    fourthContainer.classList.add('hide')
+    fourthBackground.src = "./assets/initial-window.png"
+    fourthBackground.classList.remove('hide')
+    blackWindowHighlight.classList.add('hide')
+    whiteWindowHighlight.classList.add('hide')
+    grayWindowHighlight.classList.add('hide')
+    canvasHighlight.classList.add('hide')
+    pineHighlight.classList.add('hide')
+    whiteInteriorHighlight.classList.add('hide')
+    savedFour.classList.add('hide')
+    savedFourGray.classList.add('hide')
+    uploadFour.classList.add('hide')
+    uploadFourFinal.classList.add('hide')
+    configureFourth.classList.add('hide')
+    windowBtnTwo.style.opacity="1"
+    doorBtnTwo.style.opacity="0"
+    doorBtnOne.style.opacity="0"
+    windowBtnOne.style.opacity="0"
+  } else if (moviePlaying === "fourth"
+    || moviePlaying === "fourthHalf"
+    || moviePlaying === "final") {
+    playBtn.style.pointerEvents = ""
+    firstMovie.pause();
+    firstMovie.currentTime = 0;
+    phone.classList.add('hide');
+    phoneTwo.classList.add('hide');
+    phoneThree.classList.add('hide')
+    phoneFour.classList.add('hide')
+    firstMovie.classList.remove('hide')
+    secondMovie.classList.add('hide')
+    secondMovie.pause()
+    thirdMovie.classList.add('hide')
+    thirdMovie.pause()
+    fourthMovie.classList.add('hide')
+    fourthMovie.pause()
+    fourthHalfMovie.classList.add('hide')
+    fourthHalfMovie.pause()
+    finalMovie.classList.add('hide')
+    finalMovie.pause()
+    playBtn.classList.remove('hide');
+    pauseBtn.classList.add('hide')
+    moviePlaying = "first"
+    navBar.classList.add('hide')
+    colorContainer.classList.add('hide')
+    blackHighlight.classList.remove('hide');
+    grayHighlight.classList.add('hide')
+    stainsDefaultHighlight.classList.add('hide')
+    stainsWalnutHighlight.classList.add('hide')
+    redArrow.classList.add('hide')
+    navImg.classList.add('hide')
+    grillBlinkContainer.classList.add('hide')
+    scrollDiv.classList.add('hide')
+    prairieHighlight.classList.add('hide')
+    prairieSelected.classList.add('hide')
+    modifiedColonialHighlight.classList.add('hide')
+    modifiedSelected.classList.add('hide')
+    colonialHighlight.classList.add('hide')
+    colonialSelected.classList.add('hide')
+    grillList.classList.add('hide')
+    fullIcon.classList.add('hide')
+    saveHighlight.classList.add('hide')
+    backpatch.classList.remove('hide')
+    colorBackground.classList.remove('hide')
+    initialContainer.classList.remove('hide')
+    colorBlink.classList.remove('hide')
+    grillBlink.classList.remove('hide')
+    colorBackground.src = "./assets/white-door.png"
+    colorContainer.style.overflowX = ""
+    colorContainer.style.overflowY = ""
+    doorBtnOne.style.opacity="1"
+    doorBtnTwo.style.opacity="0"
+    windowBtnOne.style.opacity="0"
+    windowBtnTwo.style.opacity="0"
+  }
+});
+
+playBtn.addEventListener('click', (event) => {
+  playBtn.classList.add('hide');
+  pauseBtn.classList.remove('hide');
+  if (moviePlaying === "first") {
+    firstMovie.play()
+    doorBtnOne.style.opacity="1"
+    doorBtnTwo.style.opacity="0"
+    windowBtnOne.style.opacity="0"
+    windowBtnTwo.style.opacity="0"
+  } else if (moviePlaying === "second") {
+    secondMovie.play()
+    doorBtnTwo.style.opacity="1"
+    doorBtnOne.style.opacity="0"
+    windowBtnOne.style.opacity="0"
+    windowBtnTwo.style.opacity="0"
+  } else if (moviePlaying === "third") {
+    thirdMovie.play()
+    windowBtnOne.style.opacity="1"
+    windowBtnTwo.style.opacity="0"
+    doorBtnOne.style.opacity="0"
+    doorBtnTwo.style.opacity="0"
+  } else if (moviePlaying === "fourth") {
+    fourthMovie.play()
+    windowBtnTwo.style.opacity="1"
+    doorBtnTwo.style.opacity="0"
+    doorBtnOne.style.opacity="0"
+    windowBtnOne.style.opacity="0"
+  } else if (moviePlaying === "fourthHalf") {
+    fourthHalfMovie.play()
+    windowBtnTwo.style.opacity="1"
+    doorBtnTwo.style.opacity="0"
+    doorBtnOne.style.opacity="0"
+    windowBtnOne.style.opacity="0"
+  } else if (moviePlaying === "final") {
+    finalMovie.play()
+    windowBtnTwo.style.opacity="0"
+    doorBtnTwo.style.opacity="0"
+    doorBtnOne.style.opacity="0"
+    windowBtnOne.style.opacity="0"
+  }
+});
+
+pauseBtn.addEventListener('click', (event) => {
+  pauseBtn.classList.add('hide');
+  playBtn.classList.remove('hide');
+  if (firstMovie.playing) {
+    moviePlaying = "first"
+    firstMovie.pause();
+  } else if(secondMovie.playing){
+    moviePlaying = "second"
+    secondMovie.pause()
+  } else if (thirdMovie.playing) {
+    moviePlaying = "third"
+    thirdMovie.pause()
+  } else if (fourthMovie.playing) {
+    moviePlaying = "fourth"
+    fourthMovie.pause()
+  } else if (fourthHalfMovie.playing) {
+    moviePlaying = "fourthHalf"
+    fourthHalfMovie.pause()
+  } else if (finalMovie.playing) {
+    moviePlaying = "final"
+    finalMovie.pause()
+  }
+});
+
+doorBtnOne.addEventListener('click', (event) => {
+  windowBtnTwo.style.opacity = "0"
+  doorBtnTwo.style.opacity = "0"
+  doorBtnOne.style.opacity = "1"
+  windowBtnOne.style.opacity = "0"
+  playBtn.style.pointerEvents = ""
+  firstMovie.pause();
+  firstMovie.currentTime = 0;
+  phone.classList.add('hide');
+  phoneTwo.classList.add('hide');
+  phoneThree.classList.add('hide')
+  phoneFour.classList.add('hide')
+  firstMovie.classList.remove('hide')
+  secondMovie.classList.add('hide')
+  secondMovie.pause()
+  thirdMovie.classList.add('hide')
+  thirdMovie.pause()
+  fourthMovie.classList.add('hide')
+  fourthMovie.pause()
+  fourthHalfMovie.classList.add('hide')
+  fourthHalfMovie.pause()
+  finalMovie.classList.add('hide')
+  finalMovie.pause()
+  playBtn.classList.remove('hide');
+  pauseBtn.classList.add('hide')
+  moviePlaying = "first"
+  navBar.classList.add('hide')
+  colorContainer.classList.add('hide')
+  blackHighlight.classList.remove('hide');
+  grayHighlight.classList.add('hide')
+  stainsDefaultHighlight.classList.add('hide')
+  stainsWalnutHighlight.classList.add('hide')
+  redArrow.classList.add('hide')
+  navImg.classList.add('hide')
+  grillBlinkContainer.classList.add('hide')
+  scrollDiv.classList.add('hide')
+  prairieHighlight.classList.add('hide')
+  prairieSelected.classList.add('hide')
+  modifiedColonialHighlight.classList.add('hide')
+  modifiedSelected.classList.add('hide')
+  colonialHighlight.classList.add('hide')
+  colonialSelected.classList.add('hide')
+  grillList.classList.add('hide')
+  fullIcon.classList.add('hide')
+  saveHighlight.classList.add('hide')
+  backpatch.classList.remove('hide')
+  colorBackground.classList.remove('hide')
+  initialContainer.classList.remove('hide')
+  colorBlink.classList.remove('hide')
+  grillBlink.classList.remove('hide')
+  colorBackground.src="./assets/white-door.png"
+  colorContainer.style.overflowX = ""
+  colorContainer.style.overflowY = ""
+});
+
+doorBtnTwo.addEventListener('click', (event) => {
+  windowBtnTwo.style.opacity = "0"
+  doorBtnTwo.style.opacity = "1"
+  doorBtnOne.style.opacity = "0"
+  windowBtnOne.style.opacity = "0"
+  playBtn.style.pointerEvents = ""
+  secondMovie.pause()
+  secondMovie.currentTime = 0;
+  phone.classList.add('hide');
+  phoneTwo.classList.add('hide');
+  phoneThree.classList.add('hide')
+  phoneFour.classList.add('hide')
+  firstMovie.classList.add('hide')
+  firstMovie.pause()
+  secondMovie.classList.remove('hide')
+  thirdMovie.classList.add('hide')
+  thirdMovie.pause()
+  fourthMovie.classList.add('hide')
+  fourthMovie.pause()
+  fourthHalfMovie.classList.add('hide')
+  fourthHalfMovie.pause()
+  finalMovie.classList.add('hide')
+  finalMovie.pause()
+  playBtn.classList.remove('hide');
+  pauseBtn.classList.add('hide')
+  moviePlaying = "second"
+  navBarTwo.classList.add('hide')
+  secondContainer.classList.add('hide')
+  secondBackground.classList.remove('hide')
+  configure.classList.add('hide')
+  configureSecond.classList.add('hide')
+  saved.classList.add('hide')
+  upload.classList.add('hide')
+  colorContainerTwo.classList.add('hide')
+  wineHighlightDecoy.classList.add('hide')
+  wineHighlight.classList.add('hide')
+  doubleDoorRedHighlight.classList.add('hide')
+  doubleDoorGreenHighlight.classList.add('hide')
+  doubleDoorStainsHighlight.classList.add('hide')
+  scrollArrow.classList.add('hide')
+  scrollDivTwo.classList.add('hide')
+  brownDoorSelected.classList.add('hide')
+  doorThreeHighlight.classList.add('hide')
+  doorThreeSelected.classList.add('hide')
+  doorList.classList.add('hide')
+  secondContainer.classList.add('hide')
+  colorBackgroundTwo.classList.remove('hide')
+  colorBackgroundTwo.src ="./assets/default-color-two.png"
+  secondBackground.src ="./assets/initial-two.png"
+  firstDoorHighlight.classList.remove('hide')
+  scrollArrow.style.top = "0px"
+});
+
+windowBtnOne.addEventListener('click', (event) => {
+  windowBtnTwo.style.opacity = "0"
+  doorBtnTwo.style.opacity = "0"
+  doorBtnOne.style.opacity = "0"
+  windowBtnOne.style.opacity = "1"
+  playBtn.style.pointerEvents = ""
+  thirdMovie.pause()
+  thirdMovie.currentTime = 0;
+  phone.classList.add('hide');
+  phoneTwo.classList.add('hide');
+  phoneThree.classList.add('hide')
+  phoneFour.classList.add('hide')
+  firstMovie.classList.add('hide')
+  firstMovie.pause()
+  secondMovie.classList.add('hide')
+  secondMovie.pause();
+  thirdMovie.classList.remove('hide')
+  fourthMovie.classList.add('hide')
+  fourthMovie.pause()
+  fourthHalfMovie.classList.add('hide')
+  fourthHalfMovie.pause()
+  finalMovie.classList.add('hide')
+  finalMovie.pause()
+  playBtn.classList.remove('hide');
+  pauseBtn.classList.add('hide')
+  moviePlaying = "third"
+  thirdColonialHighlight.classList.remove('hide')
+  thirdContainer.classList.add("hide")
+  thirdBackground.classList.remove("hide")
+  thirdBackground.src="./assets/colonial-grille.png"
+  farmhouseHighlight.classList.add("hide")
+  finishDiv.classList.add("hide")
+});
+
+windowBtnTwo.addEventListener('click', (event) => {
+  windowBtnTwo.style.opacity = "1"
+  doorBtnTwo.style.opacity = "0"
+  doorBtnOne.style.opacity = "0"
+  windowBtnOne.style.opacity = "0"
+  playBtn.style.pointerEvents = ""
+  fourthMovie.pause()
+  fourthMovie.currentTime = 0;
+  phone.classList.add('hide');
+  phoneTwo.classList.add('hide');
+  phoneThree.classList.add('hide')
+  phoneFour.classList.add('hide')
+  firstMovie.classList.add('hide')
+  firstMovie.pause()
+  secondMovie.classList.add('hide')
+  secondMovie.pause();
+  thirdMovie.classList.add('hide')
+  thirdMovie.pause()
+  fourthMovie.classList.remove('hide')
+  fourthHalfMovie.classList.add('hide')
+  fourthHalfMovie.pause()
+  finalMovie.classList.add('hide')
+  finalMovie.pause()
+  playBtn.classList.remove('hide');
+  pauseBtn.classList.add('hide')
+  moviePlaying = "fourth"
+  navBarFour.classList.add('hide')
+  initialWindowHighlight.classList.remove('hide')
+  fourthContainer.classList.add('hide')
+  fourthBackground.src="./assets/initial-window.png"
+  fourthBackground.classList.remove('hide')
+  blackWindowHighlight.classList.add('hide')
+  whiteWindowHighlight.classList.add('hide')
+  grayWindowHighlight.classList.add('hide')
+  canvasHighlight.classList.add('hide')
+  pineHighlight.classList.add('hide')
+  whiteInteriorHighlight.classList.add('hide')
+  savedFour.classList.add('hide')
+  savedFourGray.classList.add('hide')
+  uploadFour.classList.add('hide')
+  uploadFourFinal.classList.add('hide')
+  configureFourth.classList.add('hide')
+});
+
+firstMovie.addEventListener('ended', (event) => {
   phone.classList.remove("hide")
+  playBtn.style.pointerEvents="none"
+  playBtn.classList.remove('hide')
+  pauseBtn.classList.add('hide')
 });
 
 colorBlink.addEventListener('click', (event) => {
-  console.log("hey")
   colorBlink.classList.add('hide')
   colorContainer.classList.remove("hide")
   colorContainer.style.overflowX = "hidden"
@@ -71,7 +739,7 @@ colorBlink.addEventListener('click', (event) => {
 });
 
 blackHighlight.addEventListener('click', (event) => {
-  colorBackground.src="./assets/black-door.png"
+  colorBackground.src = "./assets/black-door.png"
   blackHighlight.classList.add("hide")
   grayHighlight.classList.remove("hide")
 });
@@ -99,13 +767,12 @@ redArrow.addEventListener('click', (event) => {
   colorBackground.src = "./assets/grills-selection.png"
   redArrow.classList.add("hide")
   navImg.classList.remove('hide')
-  console.log("here")
   setTimeout(() => {
     grillBlinkContainer.classList.remove('hide')
-  }, 1000)
+  }, 600)
 });
 
-grillBlink.addEventListener('click', (event) =>{
+grillBlink.addEventListener('click', (event) => {
   colorBackground.src = "./assets/grill-default.png";
   navImg.classList.add('hide')
   grillBlink.classList.add('hide');
@@ -152,14 +819,26 @@ fullIcon.addEventListener('click', (event) => {
 saveHighlight.addEventListener('click', (event) => {
   colorBackground.src = "./assets/full-door.png"
   saveHighlight.classList.add('hide');
+  secondMovie.currentTime = 0;
   secondMovie.classList.remove('hide');
   secondMovie.play();
   colorBackground.classList.add('hide');
   phone.classList.add('hide')
+  firstMovie.classList.add('hide')
+  playBtn.classList.add('hide');
+  pauseBtn.classList.remove('hide')
+  moviePlaying = "second";
+  windowBtnTwo.style.opacity = "0"
+  doorBtnTwo.style.opacity = "1"
+  doorBtnOne.style.opacity = "0"
+  windowBtnOne.style.opacity = "0"
 });
 
 secondMovie.addEventListener('ended', (event) => {
   phoneTwo.classList.remove("hide")
+  playBtn.style.pointerEvents = "none"
+  playBtn.classList.remove('hide')
+  pauseBtn.classList.add('hide')
 });
 
 firstDoorHighlight.addEventListener('click', (event) => {
@@ -201,12 +880,8 @@ doorThreeHighlight.addEventListener('click', (event) => {
   secondBackground.src = "./assets/double-door-default.png"
   doorThreeHighlight.classList.add('hide')
   brownDoorSelected.classList.add("hide")
-  // colorBackgroundTwo.classList.add('hide')
   doorThreeSelected.classList.remove("hide")
   configureSecond.classList.remove('hide');
-  // scrollDivTwo.classList.remove('hide')
-  // doorList.classList.remove('hide');
-  // doorThreeHighlight.classList.remove('hide');
 });
 
 configureSecond.addEventListener('click', (event) => {
@@ -246,165 +921,302 @@ doubleDoorStainsHighlight.addEventListener('click', (event) => {
 upload.addEventListener('click', (event) => {
   doubleDoorStainsHighlight.classList.remove('hide')
   upload.classList.remove('hide')
+  thirdMovie.currentTime = 0;
   thirdMovie.classList.remove('hide');
   thirdMovie.play();
   secondBackground.classList.add('hide');
   colorBackground.classList.add('hide');
   phoneTwo.classList.add('hide')
+  secondMovie.classList.add('hide')
+  playBtn.classList.add('hide');
+  pauseBtn.classList.remove('hide')
+  windowBtnTwo.style.opacity = "0"
+  doorBtnTwo.style.opacity = "0"
+  doorBtnOne.style.opacity = "0"
+  windowBtnOne.style.opacity = "1"
 });
 
 thirdMovie.addEventListener('ended', (event) => {
   phoneThree.classList.remove("hide")
+  playBtn.style.pointerEvents = "none"
+  playBtn.classList.remove('hide')
+  pauseBtn.classList.add('hide')
 });
 
 thirdColonialHighlight.addEventListener('click', (event) => {
-thirdContainer.classList.remove("hide");
-thirdColonialHighlight.classList.add('hide')
-farmhouseHighlight.classList.remove('hide')
+  thirdContainer.classList.remove("hide");
+  thirdColonialHighlight.classList.add('hide')
+  farmhouseHighlight.classList.remove('hide')
 });
 
 farmhouseHighlight.addEventListener('click', (event) => {
-  thirdBackground.src="./assets/farm-house-grille.png"
+  thirdBackground.src = "./assets/farm-house-grille.png"
   farmhouseHighlight.classList.add('hide')
   finishDiv.classList.remove('hide')
 });
 
-    var active = false;
-    var currentX;
-    var currentY;
-    var initialX;
-    var initialY;
-    var xOffset = 0;
-    var yOffset = 0;
+finishDiv.addEventListener('click', (event) => {
+  finishDiv.classList.add('hide')
+  fourthMovie.currentTime = 0;
+  fourthMovie.classList.remove('hide');
+  fourthMovie.play();
+  thirdBackground.classList.add('hide');
+  phoneThree.classList.add('hide')
+  thirdMovie.classList.add('hide')
+  playBtn.classList.add('hide');
+  pauseBtn.classList.remove('hide')
+  windowBtnTwo.style.opacity = "1"
+  doorBtnTwo.style.opacity = "0"
+  doorBtnOne.style.opacity = "0"
+  windowBtnOne.style.opacity = "0"
+});
 
-    scrollDiv.addEventListener("touchstart", dragStart, false);
-    scrollDiv.addEventListener("touchend", dragEnd, false);
-    scrollDiv.addEventListener("touchmove", drag, false);
-    scrollDiv.addEventListener("mousedown", dragStart, false);
-    scrollDiv.addEventListener("mouseup", dragEnd, false);
-    scrollDiv.addEventListener("mousemove", drag, false);
+fourthMovie.addEventListener('ended', (event) => {
+  phoneFour.classList.remove("hide")
+  playBtn.style.pointerEvents = "none"
+  playBtn.classList.remove('hide')
+  pauseBtn.classList.add('hide')
+});
 
-    prairieHighlight.addEventListener("touchstart", dragStart, false);
-    prairieHighlight.addEventListener("touchend", dragEnd, false);
-    prairieHighlight.addEventListener("touchmove", drag, false);
-    prairieHighlight.addEventListener("mousedown", dragStart, false);
-    prairieHighlight.addEventListener("mouseup", dragEnd, false);
-    prairieHighlight.addEventListener("mousemove", drag, false);
+initialWindowHighlight.addEventListener('click', (event) => {
+  fourthContainer.classList.remove("hide");
+  initialWindowHighlight.classList.add('hide')
+  blackWindowHighlight.classList.remove('hide')
+});
 
-    prairieSelected.addEventListener("touchstart", dragStart, false);
-    prairieSelected.addEventListener("touchend", dragEnd, false);
-    prairieSelected.addEventListener("touchmove", drag, false);
-    prairieSelected.addEventListener("mousedown", dragStart, false);
-    prairieSelected.addEventListener("mouseup", dragEnd, false);
-    prairieSelected.addEventListener("mousemove", drag, false);
+blackWindowHighlight.addEventListener('click', (event) => {
+  fourthBackground.src = "./assets/black-window.png"
+  blackWindowHighlight.classList.add('hide')
+  whiteWindowHighlight.classList.remove('hide')
+});
 
-    modifiedColonialHighlight.addEventListener("touchstart", dragStart, false);
-    modifiedColonialHighlight.addEventListener("touchend", dragEnd, false);
-    modifiedColonialHighlight.addEventListener("touchmove", drag, false);
-    modifiedColonialHighlight.addEventListener("mousedown", dragStart, false);
-    modifiedColonialHighlight.addEventListener("mouseup", dragEnd, false);
-    modifiedColonialHighlight.addEventListener("mousemove", drag, false);
+whiteWindowHighlight.addEventListener('click', (event) => {
+  fourthBackground.src = "./assets/initial-window.png"
+  blackWindowHighlight.classList.add('hide')
+  whiteWindowHighlight.classList.add('hide')
+  savedFour.classList.remove('hide')
+});
 
-    modifiedSelected.addEventListener("touchstart", dragStart, false);
-    modifiedSelected.addEventListener("touchend", dragEnd, false);
-    modifiedSelected.addEventListener("touchmove", drag, false);
-    modifiedSelected.addEventListener("mousedown", dragStart, false);
-    modifiedSelected.addEventListener("mouseup", dragEnd, false);
-    modifiedSelected.addEventListener("mousemove", drag, false);
+savedFour.addEventListener('click', (event) => {
+  fourthBackground.src = "./assets/saved-full2.png"
+  savedFour.classList.add('hide')
+  uploadFour.classList.remove('hide')
+});
 
-    colonialHighlight.addEventListener("touchstart", dragStart, false);
-    colonialHighlight.addEventListener("touchend", dragEnd, false);
-    colonialHighlight.addEventListener("touchmove", drag, false);
-    colonialHighlight.addEventListener("mousedown", dragStart, false);
-    colonialHighlight.addEventListener("mouseup", dragEnd, false);
-    colonialHighlight.addEventListener("mousemove", drag, false);
+uploadFour.addEventListener('click', (event) => {
+  uploadFour.classList.add('hide')
+  phoneFour.classList.add('hide')
+  fourthHalfMovie.currentTime = 0;
+  fourthHalfMovie.classList.remove('hide');
+  fourthHalfMovie.play();
+  playBtn.classList.add('hide');
+  pauseBtn.classList.remove('hide')
+});
 
-    colonialSelected.addEventListener("touchstart", dragStart, false);
-    colonialSelected.addEventListener("touchend", dragEnd, false);
-    colonialSelected.addEventListener("touchmove", drag, false);
-    colonialSelected.addEventListener("mousedown", dragStart, false);
-    colonialSelected.addEventListener("mouseup", dragEnd, false);
-    colonialSelected.addEventListener("mousemove", drag, false);
+fourthHalfMovie.addEventListener('ended', (event) => {
+  fourthBackground.src = "./assets/initial-window.png"
+  phoneFour.classList.remove("hide")
+  grayWindowHighlight.classList.remove("hide")
+  playBtn.style.pointerEvents = "none"
+  playBtn.classList.remove('hide')
+  pauseBtn.classList.add('hide')
+});
 
-    function dragStart(e) {
-      if (e.type === "touchstart") {
-        initialX = e.touches[0].clientX - xOffset;
-        initialY = e.touches[0].clientY - yOffset;
-      } else {
-        initialX = e.clientX - xOffset;
-        initialY = e.clientY - yOffset;
-      }
+grayWindowHighlight.addEventListener('click', (event) => {
+  fourthBackground.src = "./assets/gray-window.png"
+  grayWindowHighlight.classList.add('hide')
+  configureFourth.classList.remove('hide')
+});
 
-      if (e.target === grillList || e.target === prairieHighlight
-        || e.target === prairieSelected || e.target === modifiedColonialHighlight
-        || e.target === modifiedSelected || e.target === colonialHighlight
-        || e.target === colonialSelected) {
-        active = true;
-      }
+configureFourth.addEventListener('click', (event) => {
+  fourthBackground.src = "./assets/white-interior.png"
+  navBarFour.classList.remove('hide')
+  configureFourth.classList.add('hide')
+  canvasHighlight.classList.remove('hide')
+});
+
+canvasHighlight.addEventListener('click', (event) => {
+  fourthBackground.src = "./assets/canvas-interior.png"
+  canvasHighlight.classList.add('hide')
+  pineHighlight.classList.remove('hide')
+});
+
+pineHighlight.addEventListener('click', (event) => {
+  fourthBackground.src = "./assets/pine-interior.png"
+  pineHighlight.classList.add('hide')
+  whiteInteriorHighlight.classList.remove('hide')
+});
+
+whiteInteriorHighlight.addEventListener('click', (event) => {
+  fourthBackground.src = "./assets/white-interior.png"
+  whiteInteriorHighlight.classList.add('hide')
+  savedFourGray.classList.remove('hide')
+});
+
+savedFourGray.addEventListener('click', (event) => {
+  fourthBackground.src = "./assets/fourth-window-full.png"
+  savedFourGray.classList.add('hide')
+  navBarFour.classList.add('hide')
+  uploadFourFinal.classList.remove('hide')
+});
+
+uploadFourFinal.addEventListener('click', (event) => {
+  uploadFourFinal.classList.remove('hide')
+  fourthBackground.classList.add('hide');
+  finalMovie.currentTime = 0;
+  finalMovie.classList.remove('hide');
+  finalMovie.play();
+  fourthHalfMovie.classList.add('hide')
+  fourthMovie.classList.add('hide')
+  phoneFour.classList.add('hide')
+  playBtn.classList.add('hide');
+})
+
+finalMovie.addEventListener('ended', (event) => {
+  playBtn.classList.remove('hide')
+  pauseBtn.classList.add('hide')
+  playBtn.style.pointerEvents = "none"
+  playBtn.classList.remove('hide')
+  pauseBtn.classList.add('hide')
+});
+
+
+var active = false;
+var currentX;
+var currentY;
+var initialX;
+var initialY;
+var xOffset = 0;
+var yOffset = 0;
+
+scrollDiv.addEventListener("touchstart", dragStart, false);
+scrollDiv.addEventListener("touchend", dragEnd, false);
+scrollDiv.addEventListener("touchmove", drag, false);
+scrollDiv.addEventListener("mousedown", dragStart, false);
+scrollDiv.addEventListener("mouseup", dragEnd, false);
+scrollDiv.addEventListener("mousemove", drag, false);
+
+prairieHighlight.addEventListener("touchstart", dragStart, false);
+prairieHighlight.addEventListener("touchend", dragEnd, false);
+prairieHighlight.addEventListener("touchmove", drag, false);
+prairieHighlight.addEventListener("mousedown", dragStart, false);
+prairieHighlight.addEventListener("mouseup", dragEnd, false);
+prairieHighlight.addEventListener("mousemove", drag, false);
+
+prairieSelected.addEventListener("touchstart", dragStart, false);
+prairieSelected.addEventListener("touchend", dragEnd, false);
+prairieSelected.addEventListener("touchmove", drag, false);
+prairieSelected.addEventListener("mousedown", dragStart, false);
+prairieSelected.addEventListener("mouseup", dragEnd, false);
+prairieSelected.addEventListener("mousemove", drag, false);
+
+modifiedColonialHighlight.addEventListener("touchstart", dragStart, false);
+modifiedColonialHighlight.addEventListener("touchend", dragEnd, false);
+modifiedColonialHighlight.addEventListener("touchmove", drag, false);
+modifiedColonialHighlight.addEventListener("mousedown", dragStart, false);
+modifiedColonialHighlight.addEventListener("mouseup", dragEnd, false);
+modifiedColonialHighlight.addEventListener("mousemove", drag, false);
+
+modifiedSelected.addEventListener("touchstart", dragStart, false);
+modifiedSelected.addEventListener("touchend", dragEnd, false);
+modifiedSelected.addEventListener("touchmove", drag, false);
+modifiedSelected.addEventListener("mousedown", dragStart, false);
+modifiedSelected.addEventListener("mouseup", dragEnd, false);
+modifiedSelected.addEventListener("mousemove", drag, false);
+
+colonialHighlight.addEventListener("touchstart", dragStart, false);
+colonialHighlight.addEventListener("touchend", dragEnd, false);
+colonialHighlight.addEventListener("touchmove", drag, false);
+colonialHighlight.addEventListener("mousedown", dragStart, false);
+colonialHighlight.addEventListener("mouseup", dragEnd, false);
+colonialHighlight.addEventListener("mousemove", drag, false);
+
+colonialSelected.addEventListener("touchstart", dragStart, false);
+colonialSelected.addEventListener("touchend", dragEnd, false);
+colonialSelected.addEventListener("touchmove", drag, false);
+colonialSelected.addEventListener("mousedown", dragStart, false);
+colonialSelected.addEventListener("mouseup", dragEnd, false);
+colonialSelected.addEventListener("mousemove", drag, false);
+
+function dragStart(e) {
+  if (e.type === "touchstart") {
+    initialX = e.touches[0].clientX - xOffset;
+    initialY = e.touches[0].clientY - yOffset;
+  } else {
+    initialX = e.clientX - xOffset;
+    initialY = e.clientY - yOffset;
+  }
+
+  if (e.target === grillList || e.target === prairieHighlight
+    || e.target === prairieSelected || e.target === modifiedColonialHighlight
+    || e.target === modifiedSelected || e.target === colonialHighlight
+    || e.target === colonialSelected) {
+    active = true;
+  }
+}
+
+function dragEnd(e) {
+  initialX = currentX;
+  initialY = currentY;
+
+  active = false;
+}
+
+function drag(e) {
+  if (active) {
+
+    if (event.cancelable) event.preventDefault();
+
+    if (e.type === "touchmove") {
+      currentX = e.touches[0].clientX - initialX;
+      currentY = e.touches[0].clientY - initialY;
+    } else {
+      currentX = e.clientX - initialX;
+      currentY = e.clientY - initialY;
     }
 
-    function dragEnd(e) {
-      initialX = currentX;
-      initialY = currentY;
+    xOffset = currentX;
+    yOffset = currentY;
 
-      active = false;
-    }
+    setTranslate(currentX, currentY, grillList);
+    setTranslate(currentX, currentY, modifiedColonialHighlight);
+    setTranslate(currentX, currentY, colonialHighlight);
+    setTranslate(currentX, currentY, prairieHighlight);
+    setTranslate(currentX, currentY, prairieSelected);
+    setTranslate(currentX, currentY, modifiedColonialHighlight);
+    setTranslate(currentX, currentY, modifiedSelected)
+    setTranslate(currentX, currentY, colonialHighlight)
+    setTranslate(currentX, currentY, colonialSelected)
+  }
+}
 
-    function drag(e) {
-      if (active) {
+function setTranslate(xPos, yPos, el) {
+  if (xPos >= -75 && xPos <= 0) {
+    el.style.transform = "translate3d(" + xPos + "px, " + 0 + "px, 0)";
+  }
+}
 
-        if (event.cancelable) event.preventDefault();
+var activeTwo = false;
+var currentXTwo;
+var currentYTwo;
+var initialXTwo;
+var initialYTwo;
+var xOffsetTwo = 0;
+var yOffsetTwo = 0;
 
-        if (e.type === "touchmove") {
-          currentX = e.touches[0].clientX - initialX;
-          currentY = e.touches[0].clientY - initialY;
-        } else {
-          currentX = e.clientX - initialX;
-          currentY = e.clientY - initialY;
-        }
+scrollDivTwo.addEventListener("touchstart", dragStartTwo, false);
+scrollDivTwo.addEventListener("touchend", dragEndTwo, false);
+scrollDivTwo.addEventListener("touchmove", dragTwo, false);
+scrollDivTwo.addEventListener("mousedown", dragStartTwo, false);
+scrollDivTwo.addEventListener("mouseup", dragEndTwo, false);
+scrollDivTwo.addEventListener("mousemove", dragTwo, false);
 
-        xOffset = currentX;
-        yOffset = currentY;
-
-        setTranslate(currentX, currentY, grillList);
-        setTranslate(currentX, currentY, modifiedColonialHighlight);
-        setTranslate(currentX, currentY, colonialHighlight);
-        setTranslate(currentX, currentY, prairieHighlight);
-        setTranslate(currentX, currentY, prairieSelected);
-        setTranslate(currentX, currentY, modifiedColonialHighlight);
-        setTranslate(currentX, currentY, modifiedSelected)
-        setTranslate(currentX, currentY, colonialHighlight)
-        setTranslate(currentX, currentY, colonialSelected)
-      }
-    }
-
-    function setTranslate(xPos, yPos, el) {
-      if(xPos >= -75 && xPos <= 0){
-      el.style.transform = "translate3d(" + xPos + "px, " + 0 + "px, 0)";
-      }
-    }
-
-    var activeTwo = false;
-    var currentXTwo;
-    var currentYTwo;
-    var initialXTwo;
-    var initialYTwo;
-    var xOffsetTwo = 0;
-    var yOffsetTwo = 0;
-
-    scrollDivTwo.addEventListener("touchstart", dragStartTwo, false);
-    scrollDivTwo.addEventListener("touchend", dragEndTwo, false);
-    scrollDivTwo.addEventListener("touchmove", dragTwo, false);
-    scrollDivTwo.addEventListener("mousedown", dragStartTwo, false);
-    scrollDivTwo.addEventListener("mouseup", dragEndTwo, false);
-    scrollDivTwo.addEventListener("mousemove", dragTwo, false);
-
-    brownDoorSelected.addEventListener("touchstart", dragStartTwo, false);
-    brownDoorSelected.addEventListener("touchend", dragEndTwo, false);
-    brownDoorSelected.addEventListener("touchmove", dragTwo, false);
-    brownDoorSelected.addEventListener("mousedown", dragStartTwo, false);
-    brownDoorSelected.addEventListener("mouseup", dragEndTwo, false);
-    brownDoorSelected.addEventListener("mousemove", dragTwo, false);
+brownDoorSelected.addEventListener("touchstart", dragStartTwo, false);
+brownDoorSelected.addEventListener("touchend", dragEndTwo, false);
+brownDoorSelected.addEventListener("touchmove", dragTwo, false);
+brownDoorSelected.addEventListener("mousedown", dragStartTwo, false);
+brownDoorSelected.addEventListener("mouseup", dragEndTwo, false);
+brownDoorSelected.addEventListener("mousemove", dragTwo, false);
 
 doorThreeHighlight.addEventListener("touchstart", dragStartTwo, false);
 doorThreeHighlight.addEventListener("touchend", dragEndTwo, false);
@@ -420,60 +1232,60 @@ doorThreeSelected.addEventListener("mousedown", dragStartTwo, false);
 doorThreeSelected.addEventListener("mouseup", dragEndTwo, false);
 doorThreeSelected.addEventListener("mousemove", dragTwo, false);
 
-    function dragStartTwo(e) {
-      if (e.type === "touchstart") {
-        initialXTwo = e.touches[0].clientX - xOffsetTwo;
-        initialYTwo = e.touches[0].clientY - yOffsetTwo;
-      } else {
-        initialXTwo = e.clientX - xOffsetTwo;
-        initialYTwo = e.clientY - yOffsetTwo;
-      }
+function dragStartTwo(e) {
+  if (e.type === "touchstart") {
+    initialXTwo = e.touches[0].clientX - xOffsetTwo;
+    initialYTwo = e.touches[0].clientY - yOffsetTwo;
+  } else {
+    initialXTwo = e.clientX - xOffsetTwo;
+    initialYTwo = e.clientY - yOffsetTwo;
+  }
 
-      if (e.target === doorList || e.target === brownDoorSelected
-        || e.target === doorThreeHighlight || e.target === doorThreeSelected
-        || e.target === modifiedSelected || e.target === colonialHighlight
-        || e.target === colonialSelected) {
-        activeTwo = true;
-      }
+  if (e.target === doorList || e.target === brownDoorSelected
+    || e.target === doorThreeHighlight || e.target === doorThreeSelected
+    || e.target === modifiedSelected || e.target === colonialHighlight
+    || e.target === colonialSelected) {
+    activeTwo = true;
+  }
+}
+
+function dragEndTwo(e) {
+  initialXTwo = currentXTwo;
+  initialYTwo = currentYTwo;
+
+  activeTwo = false;
+}
+
+function dragTwo(e) {
+  if (activeTwo) {
+
+    if (event.cancelable) event.preventDefault();
+
+    if (e.type === "touchmove") {
+      currentXTwo = e.touches[0].clientX - initialXTwo;
+      currentYTwo = e.touches[0].clientY - initialYTwo;
+    } else {
+      currentXTwo = e.clientX - initialXTwo;
+      currentYTwo = e.clientY - initialYTwo;
     }
 
-    function dragEndTwo(e) {
-      initialXTwo = currentXTwo;
-      initialYTwo = currentYTwo;
+    xOffsetTwo = currentXTwo;
+    yOffsetTwo = currentYTwo;
 
-      activeTwo = false;
-    }
+    setTranslateTwo(currentXTwo, currentYTwo, doorList);
+    setTranslateTwo(currentXTwo, currentYTwo, brownDoorSelected);
+    setTranslateTwo(currentXTwo, currentYTwo, doorThreeHighlight);
+    setTranslateTwo(currentXTwo, currentYTwo, doorThreeSelected);
+    setTranslateTwo(currentXTwo, currentYTwo, prairieSelected);
+    setTranslateTwo(currentXTwo, currentYTwo, modifiedColonialHighlight);
+    setTranslateTwo(currentXTwo, currentYTwo, modifiedSelected)
+    setTranslateTwo(currentXTwo, currentYTwo, colonialHighlight)
+    setTranslateTwo(currentXTwo, currentYTwo, colonialSelected)
+  }
+}
 
-    function dragTwo(e) {
-      if (activeTwo) {
-
-        if (event.cancelable) event.preventDefault();
-
-        if (e.type === "touchmove") {
-          currentXTwo = e.touches[0].clientX - initialXTwo;
-          currentYTwo = e.touches[0].clientY - initialYTwo;
-        } else {
-          currentXTwo = e.clientX - initialXTwo;
-          currentYTwo = e.clientY - initialYTwo;
-        }
-
-        xOffsetTwo = currentXTwo;
-        yOffsetTwo = currentYTwo;
-
-        setTranslateTwo(currentXTwo, currentYTwo, doorList);
-        setTranslateTwo(currentXTwo, currentYTwo, brownDoorSelected);
-        setTranslateTwo(currentXTwo, currentYTwo, doorThreeHighlight);
-        setTranslateTwo(currentXTwo, currentYTwo, doorThreeSelected);
-        setTranslateTwo(currentXTwo, currentYTwo, prairieSelected);
-        setTranslateTwo(currentXTwo, currentYTwo, modifiedColonialHighlight);
-        setTranslateTwo(currentXTwo, currentYTwo, modifiedSelected)
-        setTranslateTwo(currentXTwo, currentYTwo, colonialHighlight)
-        setTranslateTwo(currentXTwo, currentYTwo, colonialSelected)
-      }
-    }
-
-    function setTranslateTwo(xPos, yPos, el) {
-          if (xPos >= -189 && xPos <= 0) {
-            el.style.transform = "translate3d(" + xPos + "px, " + 0 + "px, 0)";
-          }
-        }
+function setTranslateTwo(xPos, yPos, el) {
+  if (xPos >= -189 && xPos <= 0) {
+    el.style.transform = "translate3d(" + xPos + "px, " + 0 + "px, 0)";
+  }
+}
