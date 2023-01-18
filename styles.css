@@ -194,8 +194,8 @@ body {
 
 .first-door-highlight {
   border: 2px solid #82AA6F;
-  height: 216px;
-  width: 191px;
+  height: 210px;
+  width: 183px;
   position: absolute;
   z-index: 8;
   border-radius: 5px;
@@ -203,8 +203,8 @@ body {
   -webkit-animation: borderBlink 1s step-end infinite;
   animation: borderBlink 1s step-end infinite;
   background-color: transparent;
-  top: 110px;
-  left: 65px;
+  top: 116px;
+  left: 72px;
 }
 
 .initial-window-highlight {
@@ -304,7 +304,7 @@ body {
   position: absolute;
   z-index: 8;
   top: 200px;
-  left: 220px;
+  left: 221px;
 }
 
 .color-container {
@@ -646,7 +646,7 @@ body {
 .configure-four-div {
   position: absolute;
   z-index: 7;
-  top: 401px;
+  top: 399px;
   left: 212px;
 }
 
