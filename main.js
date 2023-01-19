@@ -88,12 +88,12 @@ var windowBtnTwo = document.querySelector(".window-btn-two")
 var doorBtnOne = document.querySelector(".door-btn-one")
 var doorBtnTwo = document.querySelector(".door-btn-two")
 
-firstMovie.playbackRate = 10.0
-secondMovie.playbackRate = 10.0
-thirdMovie.playbackRate = 10.0
-fourthMovie.playbackRate = 10.0
-fourthHalfMovie.playbackRate = 10.0
-finalMovie.playbackRate = 10.0
+firstMovie.playbackRate = 1.0
+secondMovie.playbackRate = 1.0
+thirdMovie.playbackRate = 1.0
+fourthMovie.playbackRate = 1.0
+fourthHalfMovie.playbackRate = 1.0
+finalMovie.playbackRate = 1.0
 
 Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
   get: function () {
