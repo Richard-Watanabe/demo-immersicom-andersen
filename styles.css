@@ -917,14 +917,14 @@ body {
 .back{
   width:58px;
   left:22px;
-  top:42.5px;
+  bottom:27px;
   opacity:0;
 }
 
 .play{
    width:70px;
   left:98px;
-  top:25px;
+  bottom:36px;
 }
 
 .pause{
@@ -936,34 +936,34 @@ body {
 .next{
   width:58px;
   left:180px;
-  top:42.5px;
+    bottom:27px;
   opacity:0;
 }
 
 .door-btn-one{
   height:53.5px;
   left:286px;
-  top:52px;
+  bottom:23px;
 }
 
 .door-btn-two{
   height:53.5px;
   left:556px;
-  top:52px;
+  bottom:23px;
   opacity:0
 }
 
 .window-btn-one{
   height:53.5px;
   left:827px;
-  top:52px;
+  bottom:23px;
   opacity:0
 }
 
 .window-btn-two{
   height:53.5px;
   left:1093px;
-  top:52px;
+  bottom:23px;
   opacity:0
 }
 
@@ -975,50 +975,56 @@ body {
   .play{
     width:40px;
     left:95px;
-    top:60px;
+    bottom:27px;
   }
 
   .pause{
     width:40px;
     left:95px;
-    top:60px;
+    bottom:27px;
   }
 
   .next{
       width:48px;
   left:158px;
-  top:58px;
+  opacity:1;
+  bottom:22px;
+   animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
   }
 
   .back{
           width:48px;
   left:20px;
-  top:58px;
+  bottom:22px;
+  opacity:1;
+   animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
   }
 
   .door-btn-one{
     height:46px;
     left:254px;
-    top:65px;
+    bottom:18px;
   }
 
   .door-btn-two{
   height:46px;
     left:489px;
-    top:65px;
+    bottom:18px;
   }
 
 .window-btn-one{
   height:46px;
     left:724px;
-    top:65px;
+    bottom:18px;
   }
 
 
 .window-btn-two{
   height:46px;
     left:957px;
-    top:65px;
+    bottom:18px;
   }
 
   .color-blink{
