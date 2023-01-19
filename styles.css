@@ -916,53 +916,53 @@ body {
 .back{
   width:58px;
   left:22px;
-  bottom:27px;
+  bottom:67px;
   opacity:0;
 }
 
 .play{
    width:70px;
   left:98px;
-  bottom:36px;
+  bottom:70px;
 }
 
 .pause{
    width:70px;
   left:98px;
-  top:25px;
+  bottom:70px;
 }
 
 .next{
   width:58px;
   left:180px;
-    bottom:27px;
+    bottom:67px;
   opacity:0;
 }
 
 .door-btn-one{
   height:53.5px;
   left:286px;
-  bottom:23px;
+  bottom:63px;
 }
 
 .door-btn-two{
   height:53.5px;
   left:556px;
-  bottom:23px;
+  bottom:63px;
   opacity:0
 }
 
 .window-btn-one{
   height:53.5px;
   left:827px;
-  bottom:23px;
+  bottom:63px;
   opacity:0
 }
 
 .window-btn-two{
   height:53.5px;
   left:1093px;
-  bottom:23px;
+  bottom:63px;
   opacity:0
 }
 
@@ -971,6 +971,10 @@ body {
 }
 
 @media screen and (max-height: 880px) {
+
+.movie{
+bottom:8px;
+}
 
   .ui-container{
   position: absolute;
@@ -981,59 +985,58 @@ body {
   .play{
     width:40px;
     left:95px;
-    bottom:27px;
+    bottom:65px;
   }
 
   .pause{
     width:40px;
     left:95px;
-    bottom:27px;
+    bottom:65px;
   }
 
   .next{
       width:48px;
   left:158px;
   opacity:0;
-  bottom:22px;
-
+  bottom:62px;
   }
 
   .back{
           width:48px;
   left:20px;
-  bottom:22px;
+  bottom:62px;
   opacity:0;
   }
 
   .door-btn-one{
     height:46px;
     left:254px;
-    bottom:18px;
+    bottom:57px;
   }
 
   .door-btn-two{
   height:46px;
     left:489px;
-    bottom:18px;
+    bottom:57px;
   }
 
 .window-btn-one{
   height:46px;
     left:724px;
-    bottom:18px;
+    bottom:57px;
   }
 
 
 .window-btn-two{
   height:46px;
     left:957px;
-    bottom:18px;
+    bottom:57px;
   }
 
   .color-blink{
   width: 88px;
   height:57px;
-  top: 185px;
+  top: 178px;
   left: 192px;
   }
 
@@ -1170,7 +1173,7 @@ body {
   .first-door-highlight{
     height: 184px;
     width: 156px;
-    top: 106px;
+    top: 98px;
     left: 68px;
   }
 
@@ -1305,7 +1308,7 @@ body {
 }
 
 .third-colonial-highlight{
-   top: 356px;
+   top: 348px;
   left: 236.5px;
 }
 
@@ -1334,7 +1337,7 @@ body {
 }
 
 .initial-window-highlight{
-  height: 387px;
+  height: 379px;
   width: 164px;
    top: 79px;
   left: 68px;
