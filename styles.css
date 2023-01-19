@@ -1092,8 +1092,6 @@ bottom:8px;
   .nav-img{
      width: 580px;
     top: 190px;
-    /* animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite; */
   }
 
   .grill-blink{
