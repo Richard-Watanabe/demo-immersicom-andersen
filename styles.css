@@ -916,53 +916,53 @@ body {
 .back{
   width:58px;
   left:22px;
-  bottom:67px;
+  bottom:49px;
   opacity:0;
 }
 
 .play{
    width:70px;
-  left:98px;
-  bottom:70px;
+  left:95px;
+  bottom:55px;
 }
 
 .pause{
    width:70px;
-  left:98px;
-  bottom:70px;
+  left:95px;
+  bottom:55px;
 }
 
 .next{
   width:58px;
   left:180px;
-    bottom:67px;
+    bottom:49px;
   opacity:0;
 }
 
 .door-btn-one{
   height:53.5px;
   left:286px;
-  bottom:63px;
+  bottom:45px;
 }
 
 .door-btn-two{
   height:53.5px;
   left:556px;
-  bottom:63px;
+  bottom:45px;
   opacity:0
 }
 
 .window-btn-one{
   height:53.5px;
   left:827px;
-  bottom:63px;
+  bottom:45px;
   opacity:0
 }
 
 .window-btn-two{
   height:53.5px;
   left:1093px;
-  bottom:63px;
+  bottom:45px;
   opacity:0
 }
 
@@ -985,52 +985,52 @@ bottom:8px;
   .play{
     width:40px;
     left:95px;
-    bottom:65px;
+    bottom:50px;
   }
 
   .pause{
     width:40px;
     left:95px;
-    bottom:65px;
+    bottom:50px;
   }
 
   .next{
       width:48px;
   left:158px;
   opacity:0;
-  bottom:62px;
+  bottom:47px;
   }
 
   .back{
           width:48px;
   left:20px;
-  bottom:62px;
+  bottom:47px;
   opacity:0;
   }
 
   .door-btn-one{
     height:46px;
     left:254px;
-    bottom:57px;
+    bottom:40px;
   }
 
   .door-btn-two{
   height:46px;
     left:489px;
-    bottom:57px;
+    bottom:40px;
   }
 
 .window-btn-one{
   height:46px;
     left:724px;
-    bottom:57px;
+    bottom:40px;
   }
 
 
 .window-btn-two{
   height:46px;
     left:957px;
-    bottom:57px;
+    bottom:40px;
   }
 
   .color-blink{
