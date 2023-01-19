@@ -904,9 +904,8 @@ body {
 
 .ui-container{
   position: absolute;
-  width:100vw;
-  height:128px;
-  bottom:0;
+  width:1366px;
+  height:1024px;
 }
 
 .ui-piece{
@@ -972,6 +971,13 @@ body {
 }
 
 @media screen and (max-height: 880px) {
+
+  .ui-container{
+  position: absolute;
+  width:1194px;
+  height:834px;
+}
+
   .play{
     width:40px;
     left:95px;
@@ -987,19 +993,16 @@ body {
   .next{
       width:48px;
   left:158px;
-  opacity:1;
+  opacity:0;
   bottom:22px;
-   animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+
   }
 
   .back{
           width:48px;
   left:20px;
   bottom:22px;
-  opacity:1;
-   animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+  opacity:0;
   }
 
   .door-btn-one{
