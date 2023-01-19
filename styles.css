@@ -973,15 +973,15 @@ body {
 
 @media screen and (max-height: 880px) {
   .play{
-    width:48px;
-    left:90px;
-    top:58px;
+    width:40px;
+    left:95px;
+    top:60px;
   }
 
   .pause{
-    width:57px;
-    left:85px;
-    top:47.5px;
+    width:40px;
+    left:95px;
+    top:60px;
   }
 
   .next{
