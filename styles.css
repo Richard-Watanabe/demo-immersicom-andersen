@@ -213,7 +213,7 @@ body {
   width: 188px;
   position: absolute;
   z-index: 8;
-  border-radius: 5px;
+  border-radius: 2px;
   cursor: pointer;
   -webkit-animation: borderBlink 1s step-end infinite;
   animation: borderBlink 1s step-end infinite;
@@ -304,7 +304,7 @@ body {
   position: absolute;
   z-index: 8;
   top: 200px;
-  left: 221px;
+  left: 221.5px;
 }
 
 .color-container {
@@ -770,7 +770,7 @@ body {
 .grill-list {
   overflow: hidden;
   position: absolute;
-  z-index: 6;
+  z-index: 8;
   width: 399px;
   /* overflow: scroll; */
   /* height: 130px;
@@ -849,7 +849,7 @@ body {
   height: 120px;
   left: -1px;
   position: absolute;
-  z-index: 4;
+  z-index: 5;
   overflow-x: hidden;
 }
 
@@ -969,4 +969,465 @@ body {
 
 .hide {
   display: none;
+}
+
+@media screen and (max-height: 880px) {
+  .play{
+    width:57px;
+    left:85px;
+    top:47.5px;
+  }
+
+  .pause{
+    width:57px;
+    left:85px;
+    top:47.5px;
+  }
+
+  .next{
+      width:48px;
+  left:158px;
+  top:58px;
+  }
+
+  .back{
+          width:48px;
+  left:20px;
+  top:58px;
+  }
+
+  .door-btn-one{
+    height:46px;
+    left:254px;
+    top:65px;
+  }
+
+  .door-btn-two{
+  height:46px;
+    left:489px;
+    top:65px;
+  }
+
+.window-btn-one{
+  height:46px;
+    left:724px;
+    top:65px;
+  }
+
+
+.window-btn-two{
+  height:46px;
+    left:957px;
+    top:65px;
+  }
+
+  .color-blink{
+  width: 88px;
+  height:57px;
+  top: 185px;
+  left: 192px;
+  }
+
+  .nav-bar{
+    width: 312px;
+  height: 50px;
+  right: -18px;
+  top: 518px;
+  }
+
+  .phone-screen{
+    width: 283px;
+    height: 570px;
+    left:58px;
+    top:4px;
+  }
+
+  .circle-highlight{
+    width: 39.5px;
+  height: 39.5px;
+  }
+
+  .black-highlight{
+    top: 409px;
+    left: 186px;
+  }
+
+  .gray-highlight{
+    top: 339px;
+    left: 115px;
+  }
+
+  .stains-default-highlight{
+    top: 472.5px;
+    left: 9.5px;
+  }
+
+  .stains-walnut-highlight{
+    top: 471.5px;
+    left: 80.5px;
+  }
+
+  .red-arrow-div{
+    width: 12px;
+    height: 19px;
+  }
+
+  .red-arrow{
+    top: 216px;
+    left: 264px;
+  }
+
+  .nav-img{
+     width: 580px;
+    top: 190px;
+    /* animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite; */
+  }
+
+  .grill-blink{
+    top: 192px;
+  left: 192px;
+  width: 90px;
+  height:57px;
+  }
+
+  .grill-list{
+    width: 350px;
+    top:-48px;
+    left:-1px;
+  }
+
+  .grill-highlight{
+    width:  79px;
+    height: 77px;
+  }
+
+  .backpatch{
+    top:323px;
+    z-index:7
+  }
+
+  .prairie-highlight{
+    top: -40px;
+  left: 90px;
+  }
+
+  .grill-selected{
+      width: 79px;
+  height: 77px;
+  }
+
+  .prairie-selected{
+     top: -40px;
+  left: 90px;
+  }
+
+  .modified-colonial-highlight{
+       top: -44px;
+  left: 263px;
+  }
+
+  .modified-selected{
+        top: -44px;
+  left: 263px;
+  }
+
+  .colonial-highlight{
+            top: -43px;
+  left: 178px;
+  }
+
+    .colonial-selected{
+            top: -43px;
+  left: 178px;
+  }
+
+  .full-icon {
+  top: 124px;
+  left: 221px;
+  }
+
+  .full-icon-div {
+  width: 57px;
+  height: 42px;
+  }
+  .save-highlight{
+    width: 174px;
+    height: 42px;
+    top: 383px;
+    left: 55px;
+  }
+
+  .first-door-highlight{
+    height: 184px;
+    width: 156px;
+    top: 106px;
+    left: 68px;
+  }
+
+    .phone-screen-two{
+    width: 288px;
+    height: 562px;
+    left: -44px;
+    top:4px;
+  }
+
+  .configure {
+    top: 356.5px;
+    left: 210.5px;
+  }
+
+  .configure-img {
+    width: 67px;
+    height: 17px;
+  }
+
+  .color-container-two{
+      width: 289px;
+  height: 400px;
+  top: 376px;
+  left:1px;
+
+  }
+
+  .scroll-arrow{
+    left: 130px;
+  width: 35px;
+  height: 100px;
+  top: -2px;
+  }
+
+  .wine-highlight{
+    top: 139px;
+  left: 187px;
+  }
+
+  .wine-highlight-decoy{
+    top: 513px;
+  left: 213.5px;
+  }
+
+  .nav-bar-two{
+     width: 290px;
+  height: 48px;
+  top: 514px;
+  right: -2px;
+  }
+
+  .saved {
+  top: 361px;
+  left: 20px;
+}
+
+  .saved-img{
+    width: 45px;
+    height: 14px;
+  }
+
+  .door-list{
+    width: 458px;
+    top:-50px;
+  }
+
+  .door-selected{
+    width: 100px;
+    height: 116px;
+  }
+
+  .brown-door-selected{
+    top: -34px;
+  left: 8px;
+  }
+
+  .door-highlight{
+    width: 108px;
+    height: 116px;
+  }
+
+  .door-three-highlight{
+    top: -34px;
+  left: 224px;
+  }
+
+  .door-three-selected{
+     top: -34px;
+    left: 224px;
+    width: 108px;
+  }
+
+  .configure-second {
+  top: 353px;
+  left: 213px;
+}
+
+.configure-img-second {
+  width: 67px;
+    height: 17px;
+}
+
+.double-door-red-highlight{
+  top: 139px;
+  left: 188px;
+}
+
+.double-door-green-highlight{
+  top: 176.5px;
+  left: 115.5px;
+}
+
+.double-door-stains-highlight{
+  top: 250.5px;
+  left: 9.5px;
+}
+
+.upload {
+  top: 8px;
+  left: 244px;
+}
+
+.upload-icon {
+  width: 23px;
+  height: 24px;
+}
+
+.third-grille-highlight{
+  height: 40px;
+  width: 46px;
+}
+
+.third-colonial-highlight{
+   top: 356px;
+  left: 236.5px;
+}
+
+.phone-screen-three{
+    width: 283px;
+  height: 535px;
+  left: -43px;
+  top: -6px;
+}
+
+.farmhouse-highlight{
+  top: 358px;
+  left: 64px;
+  height: 39px;
+  width: 47px;
+}
+
+.finish-div {
+  top: 444.5px;
+  left: 197px;
+}
+
+.finish-icon {
+  width: 68px;
+  height: 50px;
+}
+
+.initial-window-highlight{
+  height: 387px;
+  width: 164px;
+   top: 79px;
+  left: 68px;
+}
+
+.window-highlight{
+  height: 129px;
+  width: 46px;
+}
+
+.phone-screen-four{
+   width: 289px;
+  height: 570px;
+   left: -333px;
+    top: 15px;
+}
+
+.black-window-highlight{
+  top: 391.5px;
+  left: 150px;
+}
+
+.white-window-highlight{
+  top: 391.5px;
+  left: 37.5px;
+}
+
+.saved-four-div {
+  top: 357px;
+  left: 21.5px;
+}
+
+.saved-four {
+  width: 73px;
+  height: 15px;
+}
+
+.upload-four-div {
+  top: 9.5px;
+  left: 244px;
+}
+
+.upload-four-icon {
+  width: 23px;
+  height: 24px;
+}
+
+.gray-window-highlight{
+  top: 392.5px;
+  left: 93.5px;
+}
+
+.configure-four-div {
+  top: 354.5px;
+  left: 187px;
+}
+
+.configure-four {
+  width: 95px;
+  height: 18px;
+}
+
+.nav-bar-four{
+   width: 320px;
+  height: 55px;
+  top: 518px;
+  right: -15px;
+}
+
+.interior-highlight{
+  height: 38.5px;
+  width: 47.5px;
+}
+
+.canvas-highlight{
+  top: 413px;
+  left: 67px;
+}
+
+.pine-highlight{
+   top: 413.5px;
+  left: 119px;
+}
+
+.white-interior-highlight{
+  top: 413px;
+  left: 14.5px;
+}
+
+.saved-four-gray-div {
+  top: 358px;
+  left: 20px;
+}
+
+.saved-four-gray {
+  width: 76px;
+  height: 15px;
+}
+
+.upload-four-div-final {
+  top: 10.5px;
+  left: 244px;
+}
+
 }
