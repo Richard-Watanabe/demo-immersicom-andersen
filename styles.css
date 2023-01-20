@@ -970,7 +970,14 @@ body {
   display: none;
 }
 
-@media screen and (max-height: 880px) {
+@media screen and (max-height: 990px) {
+  .ui-container{
+  width:1366px;
+  height:1005px;
+}
+}
+
+@media screen and (max-height: 840px) {
 
 .movie{
 bottom:8px;
@@ -1440,4 +1447,11 @@ bottom:8px;
   left: 244px;
 }
 
+}
+
+@media screen and (max-height: 790px) {
+  .ui-container{
+  width:1194px;
+  height:818px;
+}
 }
