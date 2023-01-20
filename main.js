@@ -206,12 +206,12 @@ function resetFourthSection(){
   configureFourth.classList.add('hide')
 }
 
-firstMovie.playbackRate = 10.0
-secondMovie.playbackRate = 10.0
-thirdMovie.playbackRate = 10.0
-fourthMovie.playbackRate = 10.0
-fourthHalfMovie.playbackRate = 10.0
-finalMovie.playbackRate = 10.0
+// firstMovie.playbackRate = 10.0
+// secondMovie.playbackRate = 10.0
+// thirdMovie.playbackRate = 10.0
+// fourthMovie.playbackRate = 10.0
+// fourthHalfMovie.playbackRate = 10.0
+// finalMovie.playbackRate = 10.0
 
 Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
   get: function () {
