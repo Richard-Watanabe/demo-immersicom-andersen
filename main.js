@@ -101,105 +101,62 @@ Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
   }
 })
 
-var moviePlaying = "third"
+var moviePlaying = "first"
 
 backBtn.addEventListener('click', (event) => {
   backBtn.style.opacity = '1';
   window.setTimeout("backBtn.style.opacity='0';", 50);
   if (moviePlaying === "third") {
     playBtn.style.pointerEvents = ""
-    fourthMovie.pause()
-    fourthMovie.currentTime = 0;
+    secondMovie.pause()
+    secondMovie.currentTime = 0;
     phone.classList.add('hide');
     phoneTwo.classList.add('hide');
     phoneThree.classList.add('hide')
     phoneFour.classList.add('hide')
     firstMovie.classList.add('hide')
     firstMovie.pause()
-    secondMovie.classList.add('hide')
-    secondMovie.pause();
+    secondMovie.classList.remove('hide')
     thirdMovie.classList.add('hide')
     thirdMovie.pause()
-    fourthMovie.classList.remove('hide')
+    fourthMovie.classList.add('hide')
+    fourthMovie.pause()
     fourthHalfMovie.classList.add('hide')
     fourthHalfMovie.pause()
     finalMovie.classList.add('hide')
     finalMovie.pause()
     playBtn.classList.remove('hide');
     pauseBtn.classList.add('hide')
-    moviePlaying = "fourth"
-    navBarFour.classList.add('hide')
-    initialWindowHighlight.classList.remove('hide')
-    fourthContainer.classList.add('hide')
-    fourthBackground.src = "./assets/initial-window.png"
-    fourthBackground.classList.remove('hide')
-    blackWindowHighlight.classList.add('hide')
-    whiteWindowHighlight.classList.add('hide')
-    grayWindowHighlight.classList.add('hide')
-    canvasHighlight.classList.add('hide')
-    pineHighlight.classList.add('hide')
-    whiteInteriorHighlight.classList.add('hide')
-    savedFour.classList.add('hide')
-    savedFourGray.classList.add('hide')
-    uploadFour.classList.add('hide')
-    uploadFourFinal.classList.add('hide')
-    configureFourth.classList.add('hide')
-    windowBtnTwo.style.opacity = "1"
-    // doorBtnTwo.style.opacity = "0"
-    // doorBtnOne.style.opacity = "0"
+    moviePlaying = "second"
+    navBarTwo.classList.add('hide')
+    secondContainer.classList.add('hide')
+    secondBackground.classList.remove('hide')
+    configure.classList.add('hide')
+    configureSecond.classList.add('hide')
+    saved.classList.add('hide')
+    upload.classList.add('hide')
+    colorContainerTwo.classList.add('hide')
+    wineHighlightDecoy.classList.add('hide')
+    wineHighlight.classList.add('hide')
+    doubleDoorRedHighlight.classList.add('hide')
+    doubleDoorGreenHighlight.classList.add('hide')
+    doubleDoorStainsHighlight.classList.add('hide')
+    scrollArrow.classList.add('hide')
+    scrollDivTwo.classList.add('hide')
+    brownDoorSelected.classList.add('hide')
+    doorThreeHighlight.classList.add('hide')
+    doorThreeSelected.classList.add('hide')
+    doorList.classList.add('hide')
+    secondContainer.classList.add('hide')
+    colorBackgroundTwo.classList.remove('hide')
+    colorBackgroundTwo.src = "./assets/default-color-two.png"
+    secondBackground.src = "./assets/initial-two.png"
+    firstDoorHighlight.classList.remove('hide')
+    scrollArrow.style.top = "0px"
+    doorBtnTwo.style.opacity = "1"
+    doorBtnOne.style.opacity = "0"
     windowBtnOne.style.opacity = "0"
-
-
-    // playBtn.style.pointerEvents = ""
-    // secondMovie.pause()
-    // secondMovie.currentTime = 0;
-    // phone.classList.add('hide');
-    // phoneTwo.classList.add('hide');
-    // phoneThree.classList.add('hide')
-    // phoneFour.classList.add('hide')
-    // firstMovie.classList.add('hide')
-    // firstMovie.pause()
-    // secondMovie.classList.remove('hide')
-    // thirdMovie.classList.add('hide')
-    // thirdMovie.pause()
-    // fourthMovie.classList.add('hide')
-    // fourthMovie.pause()
-    // fourthHalfMovie.classList.add('hide')
-    // fourthHalfMovie.pause()
-    // finalMovie.classList.add('hide')
-    // finalMovie.pause()
-    // playBtn.classList.remove('hide');
-    // pauseBtn.classList.add('hide')
-    // moviePlaying = "second"
-    // navBarTwo.classList.add('hide')
-    // secondContainer.classList.add('hide')
-    // secondBackground.classList.remove('hide')
-    // configure.classList.add('hide')
-    // configureSecond.classList.add('hide')
-    // saved.classList.add('hide')
-    // upload.classList.add('hide')
-    // colorContainerTwo.classList.add('hide')
-    // wineHighlightDecoy.classList.add('hide')
-    // wineHighlight.classList.add('hide')
-    // doubleDoorRedHighlight.classList.add('hide')
-    // doubleDoorGreenHighlight.classList.add('hide')
-    // doubleDoorStainsHighlight.classList.add('hide')
-    // scrollArrow.classList.add('hide')
-    // scrollDivTwo.classList.add('hide')
-    // brownDoorSelected.classList.add('hide')
-    // doorThreeHighlight.classList.add('hide')
-    // doorThreeSelected.classList.add('hide')
-    // doorList.classList.add('hide')
-    // secondContainer.classList.add('hide')
-    // colorBackgroundTwo.classList.remove('hide')
-    // colorBackgroundTwo.src = "./assets/default-color-two.png"
-    // secondBackground.src = "./assets/initial-two.png"
-    // firstDoorHighlight.classList.remove('hide')
-    // scrollArrow.style.top = "0px"
-    // doorBtnTwo.style.opacity = "1"
-    // doorBtnOne.style.opacity = "0"
-    // windowBtnOne.style.opacity = "0"
-    // windowBtnTwo.style.opacity = "0"
+    windowBtnTwo.style.opacity = "0"
   } else if (moviePlaying === "fourth"
   || moviePlaying === "fourthHalf"
   || moviePlaying === "final") {
@@ -232,8 +189,8 @@ backBtn.addEventListener('click', (event) => {
     finishDiv.classList.add("hide")
     windowBtnOne.style.opacity = "1"
     windowBtnTwo.style.opacity = "0"
-    // doorBtnOne.style.opacity = "0"
-    // doorBtnTwo.style.opacity = "0"
+    doorBtnOne.style.opacity = "0"
+    doorBtnTwo.style.opacity = "0"
   } else if (moviePlaying === "first") {
     playBtn.style.pointerEvents = ""
     fourthMovie.pause()
@@ -458,24 +415,24 @@ nextBtn.addEventListener('click', (event) => {
     uploadFourFinal.classList.add('hide')
     configureFourth.classList.add('hide')
     windowBtnTwo.style.opacity="1"
-    // doorBtnTwo.style.opacity="0"
-    // doorBtnOne.style.opacity="0"
+    doorBtnTwo.style.opacity="0"
+    doorBtnOne.style.opacity="0"
     windowBtnOne.style.opacity="0"
   } else if (moviePlaying === "fourth"
     || moviePlaying === "fourthHalf"
     || moviePlaying === "final") {
     playBtn.style.pointerEvents = ""
-    thirdMovie.pause()
-    thirdMovie.currentTime = 0;
+    firstMovie.pause();
+    firstMovie.currentTime = 0;
     phone.classList.add('hide');
     phoneTwo.classList.add('hide');
     phoneThree.classList.add('hide')
     phoneFour.classList.add('hide')
-    firstMovie.classList.add('hide')
-    firstMovie.pause()
+    firstMovie.classList.remove('hide')
     secondMovie.classList.add('hide')
-    secondMovie.pause();
-    thirdMovie.classList.remove('hide')
+    secondMovie.pause()
+    thirdMovie.classList.add('hide')
+    thirdMovie.pause()
     fourthMovie.classList.add('hide')
     fourthMovie.pause()
     fourthHalfMovie.classList.add('hide')
@@ -484,72 +441,39 @@ nextBtn.addEventListener('click', (event) => {
     finalMovie.pause()
     playBtn.classList.remove('hide');
     pauseBtn.classList.add('hide')
-    moviePlaying = "third"
-    thirdColonialHighlight.classList.remove('hide')
-    thirdContainer.classList.add("hide")
-    thirdBackground.classList.remove("hide")
-    thirdBackground.src = "./assets/colonial-grille.png"
-    farmhouseHighlight.classList.add("hide")
-    finishDiv.classList.add("hide")
-    windowBtnOne.style.opacity = "1"
-    windowBtnTwo.style.opacity = "0"
-    // doorBtnOne.style.opacity = "0"
-    // doorBtnTwo.style.opacity = "0"
-
-
-    // playBtn.style.pointerEvents = ""
-    // firstMovie.pause();
-    // firstMovie.currentTime = 0;
-    // phone.classList.add('hide');
-    // phoneTwo.classList.add('hide');
-    // phoneThree.classList.add('hide')
-    // phoneFour.classList.add('hide')
-    // firstMovie.classList.remove('hide')
-    // secondMovie.classList.add('hide')
-    // secondMovie.pause()
-    // thirdMovie.classList.add('hide')
-    // thirdMovie.pause()
-    // fourthMovie.classList.add('hide')
-    // fourthMovie.pause()
-    // fourthHalfMovie.classList.add('hide')
-    // fourthHalfMovie.pause()
-    // finalMovie.classList.add('hide')
-    // finalMovie.pause()
-    // playBtn.classList.remove('hide');
-    // pauseBtn.classList.add('hide')
-    // moviePlaying = "first"
-    // navBar.classList.add('hide')
-    // colorContainer.classList.add('hide')
-    // blackHighlight.classList.remove('hide');
-    // grayHighlight.classList.add('hide')
-    // stainsDefaultHighlight.classList.add('hide')
-    // stainsWalnutHighlight.classList.add('hide')
-    // redArrow.classList.add('hide')
-    // navImg.classList.add('hide')
-    // grillBlinkContainer.classList.add('hide')
-    // scrollDiv.classList.add('hide')
-    // prairieHighlight.classList.add('hide')
-    // prairieSelected.classList.add('hide')
-    // modifiedColonialHighlight.classList.add('hide')
-    // modifiedSelected.classList.add('hide')
-    // colonialHighlight.classList.add('hide')
-    // colonialSelected.classList.add('hide')
-    // grillList.classList.add('hide')
-    // fullIcon.classList.add('hide')
-    // saveHighlight.classList.add('hide')
-    // backpatch.classList.remove('hide')
-    // colorBackground.classList.remove('hide')
-    // initialContainer.classList.remove('hide')
-    // colorBlink.classList.remove('hide')
-    // grillBlink.classList.remove('hide')
-    // colorBackground.src = "./assets/white-door.png"
-    // colorContainer.style.overflowX = ""
-    // colorContainer.style.overflowY = ""
-    // backpatch.classList.add('hide')
-    // doorBtnOne.style.opacity="1"
-    // doorBtnTwo.style.opacity="0"
-    // windowBtnOne.style.opacity="0"
-    // windowBtnTwo.style.opacity="0"
+    moviePlaying = "first"
+    navBar.classList.add('hide')
+    colorContainer.classList.add('hide')
+    blackHighlight.classList.remove('hide');
+    grayHighlight.classList.add('hide')
+    stainsDefaultHighlight.classList.add('hide')
+    stainsWalnutHighlight.classList.add('hide')
+    redArrow.classList.add('hide')
+    navImg.classList.add('hide')
+    grillBlinkContainer.classList.add('hide')
+    scrollDiv.classList.add('hide')
+    prairieHighlight.classList.add('hide')
+    prairieSelected.classList.add('hide')
+    modifiedColonialHighlight.classList.add('hide')
+    modifiedSelected.classList.add('hide')
+    colonialHighlight.classList.add('hide')
+    colonialSelected.classList.add('hide')
+    grillList.classList.add('hide')
+    fullIcon.classList.add('hide')
+    saveHighlight.classList.add('hide')
+    backpatch.classList.remove('hide')
+    colorBackground.classList.remove('hide')
+    initialContainer.classList.remove('hide')
+    colorBlink.classList.remove('hide')
+    grillBlink.classList.remove('hide')
+    colorBackground.src = "./assets/white-door.png"
+    colorContainer.style.overflowX = ""
+    colorContainer.style.overflowY = ""
+    backpatch.classList.add('hide')
+    doorBtnOne.style.opacity="1"
+    doorBtnTwo.style.opacity="0"
+    windowBtnOne.style.opacity="0"
+    windowBtnTwo.style.opacity="0"
   }
 });
 
@@ -572,25 +496,25 @@ playBtn.addEventListener('click', (event) => {
     thirdMovie.play()
     windowBtnOne.style.opacity="1"
     windowBtnTwo.style.opacity="0"
-    // doorBtnOne.style.opacity="0"
-    // doorBtnTwo.style.opacity="0"
+    doorBtnOne.style.opacity="0"
+    doorBtnTwo.style.opacity="0"
   } else if (moviePlaying === "fourth") {
     fourthMovie.play()
     windowBtnTwo.style.opacity="1"
-    // doorBtnTwo.style.opacity="0"
-    // doorBtnOne.style.opacity="0"
+    doorBtnTwo.style.opacity="0"
+    doorBtnOne.style.opacity="0"
     windowBtnOne.style.opacity="0"
   } else if (moviePlaying === "fourthHalf") {
     fourthHalfMovie.play()
     windowBtnTwo.style.opacity="1"
-    // doorBtnTwo.style.opacity="0"
-    // doorBtnOne.style.opacity="0"
+    doorBtnTwo.style.opacity="0"
+    doorBtnOne.style.opacity="0"
     windowBtnOne.style.opacity="0"
   } else if (moviePlaying === "final") {
     finalMovie.play()
     windowBtnTwo.style.opacity="1"
-    // doorBtnTwo.style.opacity="0"
-    // doorBtnOne.style.opacity="0"
+    doorBtnTwo.style.opacity="0"
+    doorBtnOne.style.opacity="0"
     windowBtnOne.style.opacity="0"
   }
 });
@@ -730,8 +654,8 @@ doorBtnTwo.addEventListener('click', (event) => {
 
 windowBtnOne.addEventListener('click', (event) => {
   windowBtnTwo.style.opacity = "0"
-  // doorBtnTwo.style.opacity = "0"
-  // doorBtnOne.style.opacity = "0"
+  doorBtnTwo.style.opacity = "0"
+  doorBtnOne.style.opacity = "0"
   windowBtnOne.style.opacity = "1"
   playBtn.style.pointerEvents = ""
   thirdMovie.pause()
@@ -760,12 +684,14 @@ windowBtnOne.addEventListener('click', (event) => {
   thirdBackground.src="./assets/colonial-grille.png"
   farmhouseHighlight.classList.add("hide")
   finishDiv.classList.add("hide")
+  thirdBackground.style.top = ""
+  thirdBackground.style.left = ""
 });
 
 windowBtnTwo.addEventListener('click', (event) => {
   windowBtnTwo.style.opacity = "1"
-  // doorBtnTwo.style.opacity = "0"
-  // doorBtnOne.style.opacity = "0"
+  doorBtnTwo.style.opacity = "0"
+  doorBtnOne.style.opacity = "0"
   windowBtnOne.style.opacity = "0"
   playBtn.style.pointerEvents = ""
   fourthMovie.pause()
@@ -1065,8 +991,8 @@ upload.addEventListener('click', (event) => {
   playBtn.classList.add('hide');
   pauseBtn.classList.remove('hide')
   windowBtnTwo.style.opacity = "0"
-  // doorBtnTwo.style.opacity = "0"
-  // doorBtnOne.style.opacity = "0"
+  doorBtnTwo.style.opacity = "0"
+  doorBtnOne.style.opacity = "0"
   windowBtnOne.style.opacity = "1"
   phoneScreenThree.classList.add('hide')
   playBtn.style.pointerEvents = ""
@@ -1115,6 +1041,8 @@ farmhouseHighlight.addEventListener('click', (event) => {
   thirdBackground.src = "./assets/farm-house-grille.png"
   farmhouseHighlight.classList.add('hide')
   finishDiv.classList.remove('hide')
+  thirdBackground.style.top = "5px"
+  thirdBackground.style.left = "2px"
 });
 
 finishDiv.addEventListener('click', (event) => {
@@ -1128,11 +1056,13 @@ finishDiv.addEventListener('click', (event) => {
   playBtn.classList.add('hide');
   pauseBtn.classList.remove('hide')
   windowBtnTwo.style.opacity = "1"
-  // doorBtnTwo.style.opacity = "0"
-  // doorBtnOne.style.opacity = "0"
+  doorBtnTwo.style.opacity = "0"
+  doorBtnOne.style.opacity = "0"
   windowBtnOne.style.opacity = "0"
   phoneScreenFour.classList.add('hide')
   playBtn.style.pointerEvents = ""
+  thirdBackground.style.top = ""
+  thirdBackground.style.left = ""
 });
 
 fourthMovie.addEventListener('ended', (event) => {

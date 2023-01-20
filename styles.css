@@ -596,8 +596,8 @@ body {
 .finish-div {
   position: absolute;
   z-index: 7;
-  top: 503px;
-  left: 223px;
+  top: 506px;
+  left: 226px;
 }
 
 .finish-icon {
@@ -943,22 +943,20 @@ body {
   height:53.5px;
   left:286px;
   bottom:45px;
-  opacity:1;
-  pointer-events: none;
 }
 
 .door-btn-two{
   height:53.5px;
   left:556px;
   bottom:45px;
-  opacity:1;
-  pointer-events: none;
+  opacity:0
 }
 
 .window-btn-one{
   height:53.5px;
   left:827px;
   bottom:45px;
+  opacity:0
 }
 
 .window-btn-two{
@@ -1327,8 +1325,8 @@ bottom:8px;
 }
 
 .finish-div {
-  top: 444.5px;
-  left: 197px;
+  top: 449.5px;
+  left: 199px;
 }
 
 .finish-icon {
