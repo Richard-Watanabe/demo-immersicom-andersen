@@ -108,19 +108,19 @@ backBtn.addEventListener('click', (event) => {
   window.setTimeout("backBtn.style.opacity='0';", 50);
   if (moviePlaying === "third") {
     playBtn.style.pointerEvents = ""
-    secondMovie.pause()
-    secondMovie.currentTime = 0;
+    fourthMovie.pause()
+    fourthMovie.currentTime = 0;
     phone.classList.add('hide');
     phoneTwo.classList.add('hide');
     phoneThree.classList.add('hide')
     phoneFour.classList.add('hide')
     firstMovie.classList.add('hide')
     firstMovie.pause()
-    secondMovie.classList.remove('hide')
+    secondMovie.classList.add('hide')
+    secondMovie.pause();
     thirdMovie.classList.add('hide')
     thirdMovie.pause()
-    fourthMovie.classList.add('hide')
-    fourthMovie.pause()
+    fourthMovie.classList.remove('hide')
     fourthHalfMovie.classList.add('hide')
     fourthHalfMovie.pause()
     finalMovie.classList.add('hide')
@@ -128,36 +128,26 @@ backBtn.addEventListener('click', (event) => {
     playBtn.classList.remove('hide');
     pauseBtn.classList.add('hide')
     moviePlaying = "fourth"
-    navBarTwo.classList.add('hide')
-    secondContainer.classList.add('hide')
-    secondBackground.classList.remove('hide')
-    configure.classList.add('hide')
-    configureSecond.classList.add('hide')
-    saved.classList.add('hide')
-    upload.classList.add('hide')
-    colorContainerTwo.classList.add('hide')
-    wineHighlightDecoy.classList.add('hide')
-    wineHighlight.classList.add('hide')
-    doubleDoorRedHighlight.classList.add('hide')
-    doubleDoorGreenHighlight.classList.add('hide')
-    doubleDoorStainsHighlight.classList.add('hide')
-    scrollArrow.classList.add('hide')
-    scrollDivTwo.classList.add('hide')
-    brownDoorSelected.classList.add('hide')
-    doorThreeHighlight.classList.add('hide')
-    doorThreeSelected.classList.add('hide')
-    doorList.classList.add('hide')
-    secondContainer.classList.add('hide')
-    colorBackgroundTwo.classList.remove('hide')
-    colorBackgroundTwo.src = "./assets/default-color-two.png"
-    secondBackground.src = "./assets/initial-two.png"
-    firstDoorHighlight.classList.remove('hide')
-    scrollArrow.style.top = "0px"
-    // doorBtnTwo.style.opacity = "1"
+    navBarFour.classList.add('hide')
+    initialWindowHighlight.classList.remove('hide')
+    fourthContainer.classList.add('hide')
+    fourthBackground.src = "./assets/initial-window.png"
+    fourthBackground.classList.remove('hide')
+    blackWindowHighlight.classList.add('hide')
+    whiteWindowHighlight.classList.add('hide')
+    grayWindowHighlight.classList.add('hide')
+    canvasHighlight.classList.add('hide')
+    pineHighlight.classList.add('hide')
+    whiteInteriorHighlight.classList.add('hide')
+    savedFour.classList.add('hide')
+    savedFourGray.classList.add('hide')
+    uploadFour.classList.add('hide')
+    uploadFourFinal.classList.add('hide')
+    configureFourth.classList.add('hide')
+    windowBtnTwo.style.opacity = "1"
+    // doorBtnTwo.style.opacity = "0"
     // doorBtnOne.style.opacity = "0"
     windowBtnOne.style.opacity = "0"
-
-    windowBtnTwo.style.opacity = "1"
 
 
     // playBtn.style.pointerEvents = ""
