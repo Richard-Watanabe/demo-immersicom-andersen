@@ -943,20 +943,22 @@ body {
   height:53.5px;
   left:286px;
   bottom:45px;
+  opacity:1;
+  pointer-events: none;
 }
 
 .door-btn-two{
   height:53.5px;
   left:556px;
   bottom:45px;
-  opacity:0
+  opacity:1;
+  pointer-events: none;
 }
 
 .window-btn-one{
   height:53.5px;
   left:827px;
   bottom:45px;
-  opacity:0
 }
 
 .window-btn-two{
