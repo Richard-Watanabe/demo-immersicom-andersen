@@ -527,6 +527,8 @@ windowBtnTwo.addEventListener('click', (event) => {
   playBtn.style.pointerEvents = "none"
   resetAll();
   phoneFour.classList.remove('hide')
+  phoneScreenFour.classList.remove('hide')
+  initialWindowHighlight.classList.remove('hide')
   moviePlaying = "fourth-interactive"
   resetFourthSection();
 });

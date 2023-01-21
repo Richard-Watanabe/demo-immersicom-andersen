@@ -1024,6 +1024,21 @@ body {
   width:1366px;
   height:1005px;
 }
+.background-one {
+  height: 87vh;
+}
+
+.background-two{
+  height: 78vh;
+}
+
+.background-three{
+  height: 78vh;
+}
+
+.background-four{
+  height: 78vh;
+}
 }
 
 @media screen and (max-height: 840px) {
@@ -1496,11 +1511,83 @@ bottom:8px;
   left: 244px;
 }
 
+.background-one {
+  height: 92vh;
+}
+
+.background-two{
+  height: 83vh;
+}
+
+.background-three{
+  height: 83vh;
+}
+
+.background-four{
+  height: 83vh;
+}
+
+.color-blink{
+  top:187px;
+}
+
+.first-door-highlight{
+  top: 105px;
+}
+
+.third-colonial-highlight{
+  top:355px;
+}
+
+.initial-window-highlight{
+  top:86px;
+}
+
+.gray-window-highlight{
+  top:396px;
+}
+
 }
 
 @media screen and (max-height: 790px) {
   .ui-container{
   width:1194px;
   height:818px;
+}
+
+.background-one {
+  height: 92vh;
+}
+
+.background-two{
+  height: 83vh;
+}
+
+.background-three{
+  height: 83vh;
+}
+
+.background-four{
+  height: 83vh;
+}
+
+.color-blink{
+  top:187px;
+}
+
+.first-door-highlight{
+  top: 105px;
+}
+
+.third-colonial-highlight{
+  top:355px;
+}
+
+.initial-window-highlight{
+  top:86px;
+}
+
+.gray-window-highlight{
+  top:396px;
 }
 }
