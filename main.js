@@ -232,6 +232,7 @@ backBtn.addEventListener('click', (event) => {
     windowBtnOne.style.opacity = "0"
     playBtn.style.pointerEvents = "none"
     phoneTwo.classList.remove('hide');
+    phoneScreenTwo.classList.remove('hide')
     moviePlaying = "second-interactive"
     resetSecondSection();
   } else if (moviePlaying === "third-interactive"){
@@ -252,6 +253,7 @@ backBtn.addEventListener('click', (event) => {
     windowBtnOne.style.opacity = "1"
     playBtn.style.pointerEvents = "none"
     phoneThree.classList.remove('hide')
+    phoneScreenThree.classList.remove('hide')
     moviePlaying = "third-interactive"
     resetThirdSection();
     thirdBackground.style.top = ""
@@ -274,6 +276,7 @@ backBtn.addEventListener('click', (event) => {
     windowBtnOne.style.opacity = "0"
     playBtn.style.pointerEvents = "none"
     phoneFour.classList.remove('hide')
+    phoneScreenFour.classList.remove('hide')
     moviePlaying = "fourth-interactive"
     resetFourthSection();
   } else if (moviePlaying === "first") {
@@ -304,6 +307,7 @@ backBtn.addEventListener('click', (event) => {
     doorBtnOne.style.opacity = "1"
     windowBtnOne.style.opacity = "0"
     phone.classList.remove('hide');
+    phoneScreen.classList.remove('hide')
     moviePlaying = "first-interactive"
     resetFirstSection();
   } else if (moviePlaying === "second-interactive") {
@@ -329,6 +333,7 @@ nextBtn.addEventListener('click', (event) => {
     doorBtnOne.style.opacity = "1"
     windowBtnOne.style.opacity = "0"
     phone.classList.remove('hide');
+    phoneScreen.classList.remove('hide')
     moviePlaying = "first-interactive"
     resetFirstSection();
   } else if (moviePlaying === "first-interactive") {
@@ -349,6 +354,7 @@ nextBtn.addEventListener('click', (event) => {
     windowBtnOne.style.opacity = "0"
     playBtn.style.pointerEvents = "none"
     phoneTwo.classList.remove('hide');
+    phoneScreenTwo.classList.remove('hide')
     moviePlaying = "second-interactive"
     resetSecondSection();
   }else if (moviePlaying ==="second-interactive"){
@@ -369,6 +375,7 @@ nextBtn.addEventListener('click', (event) => {
     windowBtnOne.style.opacity = "1"
     playBtn.style.pointerEvents = "none"
     phoneThree.classList.remove('hide')
+    phoneScreenThree.classList.remove('hide')
     moviePlaying = "third-interactive"
     resetThirdSection();
     thirdBackground.style.top = ""
@@ -391,6 +398,7 @@ nextBtn.addEventListener('click', (event) => {
     windowBtnOne.style.opacity = "0"
     playBtn.style.pointerEvents = "none"
     phoneFour.classList.remove('hide')
+    phoneScreenFour.classList.remove('hide')
     moviePlaying = "fourth-interactive"
     resetFourthSection();
   } else if (moviePlaying === "fourth-interactive") {
@@ -489,6 +497,7 @@ doorBtnOne.addEventListener('click', (event) => {
   playBtn.style.pointerEvents = "none"
   resetAll();
   phone.classList.remove('hide');
+  phoneScreen.classList.remove('hide')
   moviePlaying = "first-interactive"
   resetFirstSection();
 });
@@ -501,6 +510,7 @@ doorBtnTwo.addEventListener('click', (event) => {
   playBtn.style.pointerEvents = "none"
   resetAll();
   phoneTwo.classList.remove('hide');
+  phoneScreenTwo.classList.remove('hide')
   moviePlaying = "second-interactive"
   resetSecondSection();
 });
@@ -512,9 +522,10 @@ windowBtnOne.addEventListener('click', (event) => {
   windowBtnOne.style.opacity = "1"
   playBtn.style.pointerEvents = "none"
   resetAll();
-  phoneThree.classList.remove('hide')
-  moviePlaying = "third-interactive"
   resetThirdSection();
+  phoneThree.classList.remove('hide')
+  phoneScreenThree.classList.remove('hide')
+  moviePlaying = "third-interactive"
   thirdBackground.style.top = ""
   thirdBackground.style.left = ""
 });
