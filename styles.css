@@ -216,14 +216,14 @@ body {
 }
 
 @keyframes blink-animation {
-  to {
-    visibility: hidden;
+  50% {
+    opacity: 0;
   }
 }
 
 @-webkit-keyframes blink-animation {
-  to {
-    visibility: hidden;
+   50% {
+    opacity: 0;
   }
 }
 
@@ -621,8 +621,8 @@ body {
   z-index: 7;
   width: 15px;
   height: 20px;
-  animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+  animation: blink-animation 1s steps(1, start) infinite;
+  -webkit-animation: blink-animation 1s steps(1, start) infinite;
 }
 
 .full-icon {
@@ -637,8 +637,8 @@ body {
   z-index: 7;
   width: 70px;
   height: 50px;
-  animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+  animation: blink-animation 1s steps(1, start) infinite;
+  -webkit-animation: blink-animation 1s steps(1, start) infinite;
 }
 
 .finish-div {
@@ -653,8 +653,8 @@ body {
   z-index: 7;
   width: 80px;
   height: 60px;
-  animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+  animation: blink-animation 1s steps(1, start) infinite;
+  -webkit-animation: blink-animation 1s steps(1, start) infinite;
 }
 
 .configure {
@@ -671,8 +671,8 @@ body {
   z-index: 7;
   width: 79px;
   height: 20px;
-  animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+  animation: blink-animation 1s steps(1, start) infinite;
+  -webkit-animation: blink-animation 1s steps(1, start) infinite;
 }
 
 .configure-second {
@@ -687,8 +687,8 @@ body {
   z-index: 7;
   width: 79px;
   height: 20px;
-  animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+  animation: blink-animation 1s steps(1, start) infinite;
+  -webkit-animation: blink-animation 1s steps(1, start) infinite;
 }
 
 .configure-four-div {
@@ -703,8 +703,8 @@ body {
   z-index: 7;
   width: 104px;
   height: 20px;
-  animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+  animation: blink-animation 1s steps(1, start) infinite;
+  -webkit-animation: blink-animation 1s steps(1, start) infinite;
 }
 
 .saved {
@@ -719,8 +719,8 @@ body {
   z-index: 7;
   width: 53px;
   height: 16px;
-  animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+  animation: blink-animation 1s steps(1, start) infinite;
+  -webkit-animation: blink-animation 1s steps(1, start) infinite;
 }
 
 .saved-four-div {
@@ -735,8 +735,8 @@ body {
   z-index: 7;
   width: 80px;
   height: 16px;
-  animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+  animation: blink-animation 1s steps(1, start) infinite;
+  -webkit-animation: blink-animation 1s steps(1, start) infinite;
 }
 
 .saved-four-gray-div {
@@ -751,8 +751,8 @@ body {
   z-index: 7;
   width: 87px;
   height: 17px;
-  animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+  animation: blink-animation 1s steps(1, start) infinite;
+  -webkit-animation: blink-animation 1s steps(1, start) infinite;
 }
 
 .upload {
@@ -767,8 +767,8 @@ body {
   z-index: 7;
   width: 25px;
   height: 26px;
-  animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+  animation: blink-animation 1s steps(1, start) infinite;
+  -webkit-animation: blink-animation 1s steps(1, start) infinite;
 }
 
 .upload-four-div {
@@ -783,8 +783,8 @@ body {
   z-index: 7;
   width: 27px;
   height: 28px;
-  animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+  animation: blink-animation 1s steps(1, start) infinite;
+  -webkit-animation: blink-animation 1s steps(1, start) infinite;
 }
 
 .upload-four-div-final {
