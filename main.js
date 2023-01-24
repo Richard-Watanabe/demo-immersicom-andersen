@@ -780,7 +780,7 @@ upload.addEventListener('click', (event) => {
 
 thirdMovie.addEventListener('ended', (event) => {
   resetAll();
-  thirdMovie.classList.remove('hide')
+  // thirdMovie.classList.remove('hide')
   moviePlaying = "third-interactive"
   resetThirdSection();
   phoneThree.classList.remove("hide")
@@ -832,7 +832,7 @@ finishDiv.addEventListener('click', (event) => {
 
 fourthMovie.addEventListener('ended', (event) => {
   resetAll();
-  fourthMovie.classList.remove('hide')
+  // fourthMovie.classList.remove('hide')
   moviePlaying = "fourth-interactive"
   resetFourthSection();
   phoneFour.classList.remove("hide")
