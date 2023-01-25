@@ -1,9 +1,47 @@
+//Audio
+var hitConfigureAudio = document.querySelector(".hit-configure");
+var hitFinishAudio = document.querySelector(".hit-finish");
+var hitSaveAudio = document.querySelector(".hit-save")
+var hitSaveRightAudio = document.querySelector(".hit-save-right");
+var moveNextAudio = document.querySelector(".move-next");
+var pickDDAudio = document.querySelector(".pick-DD");
+var pickFirstStainAudio = document.querySelector(".pick-first-stain");
+var pickStainAudio = document.querySelector(".pick-stain");
+var saveConfigAudio = document.querySelector(".save-config");
+var scrollDownAudio = document.querySelector(".scroll-down");
+var selectConfigAudio = document.querySelector(".select-config");
+var selectDoorAudio = document.querySelector(".select-door");
+var selectExtColorAudio = document.querySelector(".select-ext-color");
+var selectFirstAudio = document.querySelector(".select-first");
+var selectFSAudio = document.querySelector(".select-fs");
+var selectGrillesAudio = document.querySelector(".select-grilles");
+var selectSavedAudio = document.querySelector(".select-saved");
+var selectSaveFSAudio = document.querySelector(".select-save-fs");
+var selectWalnutAudio = document.querySelector(".select-walnut");
+var selectWhiteAudio = document.querySelector(".select-white");
+var tapWindowAudio = document.querySelector(".tap-window");
+var tryBlackAudio = document.querySelector(".try-black");
+var tryBlackDoorAudio = document.querySelector(".try-black-door")
+var tryCanvasAudio = document.querySelector(".try-canvas");
+var tryColonialAudio = document.querySelector(".try-colonial");
+var tryGrayAudio = document.querySelector(".try-gray");
+var tryFarmAudio = document.querySelector(".try-farm");
+var tryFGAudio = document.querySelector(".try-fg");
+var tryMCAudio = document.querySelector(".try-mc");
+var tryPineAudio = document.querySelector(".try-pine");
+var tryPrairieAudio = document.querySelector(".try-prairie");
+var tryRRAudio = document.querySelector(".try-rr")
+var trySecondAudio = document.querySelector(".try-second")
+
+// Videos
 var firstMovie = document.querySelector(".first-movie");
 var secondMovie = document.querySelector(".second-movie")
 var thirdMovie = document.querySelector(".third-movie")
 var fourthMovie = document.querySelector(".fourth-movie")
 var fourthHalfMovie = document.querySelector(".fourth-movie-half")
 var finalMovie = document.querySelector(".final-movie")
+
+// Elements
 var phone = document.querySelector(".phone");
 var phoneTwo = document.querySelector(".phone-two");
 var phoneThree = document.querySelector(".phone-three");
@@ -235,6 +273,7 @@ backBtn.addEventListener('click', (event) => {
     phoneScreenTwo.classList.remove('hide')
     moviePlaying = "second-interactive"
     resetSecondSection();
+    selectDoorAudio.play();
   } else if (moviePlaying === "third-interactive"){
     resetAll();
     playBtn.style.pointerEvents = ""
@@ -258,6 +297,7 @@ backBtn.addEventListener('click', (event) => {
     resetThirdSection();
     thirdBackground.style.top = ""
     thirdBackground.style.left = ""
+    tryColonialAudio.play();
   } else if (moviePlaying === "fourth-interactive") {
     resetAll();
     playBtn.style.pointerEvents = ""
@@ -279,6 +319,7 @@ backBtn.addEventListener('click', (event) => {
     phoneScreenFour.classList.remove('hide')
     moviePlaying = "fourth-interactive"
     resetFourthSection();
+    tapWindowAudio.play();
   } else if (moviePlaying === "first") {
     resetAll();
     playBtn.style.pointerEvents = ""
@@ -310,6 +351,7 @@ backBtn.addEventListener('click', (event) => {
     phoneScreen.classList.remove('hide')
     moviePlaying = "first-interactive"
     resetFirstSection();
+    selectExtColorAudio.play();
   } else if (moviePlaying === "second-interactive") {
     resetAll();
     playBtn.style.pointerEvents = ""
@@ -336,6 +378,7 @@ nextBtn.addEventListener('click', (event) => {
     phoneScreen.classList.remove('hide')
     moviePlaying = "first-interactive"
     resetFirstSection();
+    selectExtColorAudio.play();
   } else if (moviePlaying === "first-interactive") {
     resetAll();
     playBtn.style.pointerEvents = ""
@@ -357,6 +400,7 @@ nextBtn.addEventListener('click', (event) => {
     phoneScreenTwo.classList.remove('hide')
     moviePlaying = "second-interactive"
     resetSecondSection();
+    selectDoorAudio.play();
   }else if (moviePlaying ==="second-interactive"){
     resetAll();
     playBtn.style.pointerEvents = ""
@@ -380,6 +424,7 @@ nextBtn.addEventListener('click', (event) => {
     resetThirdSection();
     thirdBackground.style.top = ""
     thirdBackground.style.left = ""
+    tryColonialAudio.play();
   } else if (moviePlaying === "third-interactive"){
     resetAll();
     playBtn.style.pointerEvents = ""
@@ -401,6 +446,7 @@ nextBtn.addEventListener('click', (event) => {
     phoneScreenFour.classList.remove('hide')
     moviePlaying = "fourth-interactive"
     resetFourthSection();
+    tapWindowAudio.play();
   } else if (moviePlaying === "fourth-interactive") {
     resetAll();
     playBtn.style.pointerEvents = ""
@@ -500,6 +546,7 @@ doorBtnOne.addEventListener('click', (event) => {
   phoneScreen.classList.remove('hide')
   moviePlaying = "first-interactive"
   resetFirstSection();
+  selectExtColorAudio.play();
 });
 
 doorBtnTwo.addEventListener('click', (event) => {
@@ -513,6 +560,7 @@ doorBtnTwo.addEventListener('click', (event) => {
   phoneScreenTwo.classList.remove('hide')
   moviePlaying = "second-interactive"
   resetSecondSection();
+  selectDoorAudio.play();
 });
 
 windowBtnOne.addEventListener('click', (event) => {
@@ -528,6 +576,7 @@ windowBtnOne.addEventListener('click', (event) => {
   moviePlaying = "third-interactive"
   thirdBackground.style.top = ""
   thirdBackground.style.left = ""
+  tryColonialAudio.play();
 });
 
 windowBtnTwo.addEventListener('click', (event) => {
@@ -542,6 +591,7 @@ windowBtnTwo.addEventListener('click', (event) => {
   initialWindowHighlight.classList.remove('hide')
   moviePlaying = "fourth-interactive"
   resetFourthSection();
+  tapWindowAudio.play();
 });
 
 firstMovie.addEventListener('ended', (event) => {
@@ -554,6 +604,7 @@ firstMovie.addEventListener('ended', (event) => {
   doorBtnOne.style.opacity = "1"
   windowBtnOne.style.opacity = "0"
   moviePlaying === "first-interactive"
+  selectExtColorAudio.play();
 });
 
 colorBlink.addEventListener('click', (event) => {
@@ -563,31 +614,35 @@ colorBlink.addEventListener('click', (event) => {
   colorContainer.style.overflowX = "hidden"
   initialContainer.classList.add('hide')
   navBar.classList.remove('hide')
+  tryBlackDoorAudio.play();
 });
 
 blackHighlight.addEventListener('click', (event) => {
   colorBackground.src = "./assets/black-door.png"
   blackHighlight.classList.add("hide")
   grayHighlight.classList.remove("hide")
+  tryGrayAudio.play();
 });
 
 grayHighlight.addEventListener('click', (event) => {
   colorBackground.src = "./assets/gray-door.png"
   grayHighlight.classList.add("hide")
   stainsDefaultHighlight.classList.remove("hide")
+  pickStainAudio.play();
 });
 
 stainsDefaultHighlight.addEventListener('click', (event) => {
   colorBackground.src = "./assets/stains-door.png"
   stainsDefaultHighlight.classList.add("hide")
   stainsWalnutHighlight.classList.remove("hide")
+  selectWalnutAudio.play();
 });
 
 stainsWalnutHighlight.addEventListener('click', (event) => {
   colorBackground.src = "./assets/walnut-door.png"
   stainsWalnutHighlight.classList.add("hide")
   redArrow.classList.remove('hide')
-
+  moveNextAudio.play();
 });
 
 redArrow.addEventListener('click', (event) => {
@@ -596,6 +651,7 @@ redArrow.addEventListener('click', (event) => {
   navImg.classList.remove('hide')
   setTimeout(() => {
     grillBlinkContainer.classList.remove('hide')
+    selectGrillesAudio.play();
   }, 600)
 });
 
@@ -609,6 +665,7 @@ grillBlink.addEventListener('click', (event) => {
   colorContainer.style.overflowY = "hidden"
   scrollDiv.classList.remove('hide')
   backpatch.classList.remove('hide')
+  tryPrairieAudio.play();
 })
 
 prairieHighlight.addEventListener('click', (event) => {
@@ -617,6 +674,7 @@ prairieHighlight.addEventListener('click', (event) => {
   prairieHighlight.classList.add('hide');
   modifiedColonialHighlight.classList.remove('hide')
   prairieSelected.classList.remove('hide')
+  tryMCAudio.play();
 })
 
 modifiedColonialHighlight.addEventListener('click', (event) => {
@@ -625,6 +683,7 @@ modifiedColonialHighlight.addEventListener('click', (event) => {
   prairieSelected.classList.add('hide')
   modifiedSelected.classList.remove('hide')
   modifiedColonialHighlight.classList.add('hide')
+  tryColonialAudio.play();
 });
 
 colonialHighlight.addEventListener('click', (event) => {
@@ -633,6 +692,7 @@ colonialHighlight.addEventListener('click', (event) => {
   modifiedSelected.classList.add('hide')
   colonialHighlight.classList.add('hide')
   fullIcon.classList.remove('hide')
+  selectFSAudio.play();
 });
 
 fullIcon.addEventListener('click', (event) => {
@@ -643,6 +703,7 @@ fullIcon.addEventListener('click', (event) => {
   scrollDiv.classList.add('hide')
   saveHighlight.classList.remove('hide')
   backpatch.classList.add('hide')
+  saveConfigAudio.play();
 });
 
 saveHighlight.addEventListener('click', (event) => {
@@ -677,6 +738,7 @@ secondMovie.addEventListener('ended', (event) => {
   doorBtnOne.style.opacity = "0"
   windowBtnOne.style.opacity = "0"
   moviePlaying = "second-interactive";
+  selectDoorAudio.play();
 });
 
 firstDoorHighlight.addEventListener('click', (event) => {
@@ -685,6 +747,7 @@ firstDoorHighlight.addEventListener('click', (event) => {
   phoneScreenTwo.classList.remove('hide')
   configure.classList.remove('hide');
   navBarTwo.classList.remove('hide');
+  hitConfigureAudio.play();
 });
 
 configure.addEventListener('click', (event) => {
@@ -694,6 +757,10 @@ configure.addEventListener('click', (event) => {
   wineHighlight.classList.remove('hide')
   wineHighlightDecoy.classList.remove('hide')
   colorContainerTwo.classList.remove('hide')
+  scrollDownAudio.play();
+  setTimeout(() => {
+    tryRRAudio.play();
+  }, 2000)
 });
 
 wineHighlight.addEventListener('click', (event) => {
@@ -702,7 +769,7 @@ wineHighlight.addEventListener('click', (event) => {
   wineHighlight.classList.add('hide')
   saved.classList.remove('hide')
   scrollArrow.classList.add('hide')
-
+  selectSavedAudio.play();
 });
 
 saved.addEventListener('click', (event) => {
@@ -713,6 +780,7 @@ saved.addEventListener('click', (event) => {
   scrollDivTwo.classList.remove('hide')
   doorList.classList.remove('hide');
   doorThreeHighlight.classList.remove('hide');
+  pickDDAudio.play();
 });
 
 doorThreeHighlight.addEventListener('click', (event) => {
@@ -721,6 +789,7 @@ doorThreeHighlight.addEventListener('click', (event) => {
   brownDoorSelected.classList.add("hide")
   doorThreeSelected.classList.remove("hide")
   configureSecond.classList.remove('hide');
+  selectConfigAudio.play();
 });
 
 configureSecond.addEventListener('click', (event) => {
@@ -732,7 +801,8 @@ configureSecond.addEventListener('click', (event) => {
   scrollDivTwo.classList.add("hide")
   colorBackgroundTwo.classList.remove('hide')
   doubleDoorRedHighlight.classList.remove('hide')
-  scrollArrow.classList.remove('hide')
+  scrollArrow.classList.remove('hide');
+  tryRRAudio.play();
 });
 
 doubleDoorRedHighlight.addEventListener('click', (event) => {
@@ -740,6 +810,7 @@ doubleDoorRedHighlight.addEventListener('click', (event) => {
   colorBackgroundTwo.src = "./assets/red-exterior-selected.png"
   doubleDoorRedHighlight.classList.add('hide')
   doubleDoorGreenHighlight.classList.remove('hide')
+  tryFGAudio.play();
 });
 
 doubleDoorGreenHighlight.addEventListener('click', (event) => {
@@ -748,6 +819,10 @@ doubleDoorGreenHighlight.addEventListener('click', (event) => {
   doubleDoorGreenHighlight.classList.add('hide')
   doubleDoorStainsHighlight.classList.remove('hide')
   scrollArrow.style.top = "107px"
+  scrollDownAudio.play();
+  setTimeout(() => {
+    pickFirstStainAudio.play();
+  }, 2000)
 });
 
 doubleDoorStainsHighlight.addEventListener('click', (event) => {
@@ -755,6 +830,7 @@ doubleDoorStainsHighlight.addEventListener('click', (event) => {
   colorBackgroundTwo.src = "./assets/stains-exterior-selected.png"
   doubleDoorStainsHighlight.classList.add('hide')
   upload.classList.remove('hide')
+  hitSaveRightAudio.play();
 });
 
 upload.addEventListener('click', (event) => {
@@ -792,6 +868,7 @@ thirdMovie.addEventListener('ended', (event) => {
   doorBtnTwo.style.opacity = "0"
   doorBtnOne.style.opacity = "0"
   windowBtnOne.style.opacity = "1"
+  tryColonialAudio.play();
 });
 
 thirdColonialHighlight.addEventListener('click', (event) => {
@@ -799,6 +876,7 @@ thirdColonialHighlight.addEventListener('click', (event) => {
   phoneScreenThree.classList.remove('hide')
   thirdColonialHighlight.classList.add('hide')
   farmhouseHighlight.classList.remove('hide')
+  tryFarmAudio.play();
 });
 
 farmhouseHighlight.addEventListener('click', (event) => {
@@ -806,7 +884,8 @@ farmhouseHighlight.addEventListener('click', (event) => {
   farmhouseHighlight.classList.add('hide')
   finishDiv.classList.remove('hide')
   thirdBackground.style.top = "5px"
-  thirdBackground.style.left = "2px"
+  thirdBackground.style.left = "2px";
+  hitFinishAudio.play();
 });
 
 finishDiv.addEventListener('click', (event) => {
@@ -843,6 +922,7 @@ fourthMovie.addEventListener('ended', (event) => {
   doorBtnTwo.style.opacity = "0"
   doorBtnOne.style.opacity = "0"
   windowBtnOne.style.opacity = "0"
+  tapWindowAudio.play();
 });
 
 initialWindowHighlight.addEventListener('click', (event) => {
@@ -850,25 +930,29 @@ initialWindowHighlight.addEventListener('click', (event) => {
   phoneScreenFour.classList.remove('hide')
   initialWindowHighlight.classList.add('hide')
   blackWindowHighlight.classList.remove('hide')
+  tryBlackAudio.play();
 });
 
 blackWindowHighlight.addEventListener('click', (event) => {
   fourthBackground.src = "./assets/black-window.png"
   blackWindowHighlight.classList.add('hide')
-  whiteWindowHighlight.classList.remove('hide')
+  whiteWindowHighlight.classList.remove('hide');
+  selectFirstAudio.play();
 });
 
 whiteWindowHighlight.addEventListener('click', (event) => {
   fourthBackground.src = "./assets/initial-window.png"
   blackWindowHighlight.classList.add('hide')
   whiteWindowHighlight.classList.add('hide')
-  savedFour.classList.remove('hide')
+  savedFour.classList.remove('hide');
+  selectSavedAudio.play();
 });
 
 savedFour.addEventListener('click', (event) => {
   fourthBackground.src = "./assets/saved-full2.png"
   savedFour.classList.add('hide')
   uploadFour.classList.remove('hide')
+  hitSaveRightAudio.play();
 });
 
 uploadFour.addEventListener('click', (event) => {
@@ -888,12 +972,14 @@ fourthHalfMovie.addEventListener('ended', (event) => {
   phoneFour.classList.remove("hide")
   grayWindowHighlight.classList.remove("hide")
   playBtn.style.pointerEvents = "none"
+  trySecondAudio.play();
 });
 
 grayWindowHighlight.addEventListener('click', (event) => {
   fourthBackground.src = "./assets/gray-window.png"
   grayWindowHighlight.classList.add('hide')
   configureFourth.classList.remove('hide')
+  hitConfigureAudio.play();
 });
 
 configureFourth.addEventListener('click', (event) => {
@@ -901,24 +987,28 @@ configureFourth.addEventListener('click', (event) => {
   navBarFour.classList.remove('hide')
   configureFourth.classList.add('hide')
   canvasHighlight.classList.remove('hide')
+  tryCanvasAudio.play();
 });
 
 canvasHighlight.addEventListener('click', (event) => {
   fourthBackground.src = "./assets/canvas-interior.png"
   canvasHighlight.classList.add('hide')
   pineHighlight.classList.remove('hide')
+  tryPineAudio.play();
 });
 
 pineHighlight.addEventListener('click', (event) => {
   fourthBackground.src = "./assets/pine-interior.png"
   pineHighlight.classList.add('hide')
   whiteInteriorHighlight.classList.remove('hide')
+  selectWhiteAudio.play();
 });
 
 whiteInteriorHighlight.addEventListener('click', (event) => {
   fourthBackground.src = "./assets/white-interior.png"
   whiteInteriorHighlight.classList.add('hide')
-  savedFourGray.classList.remove('hide')
+  savedFourGray.classList.remove('hide');
+  selectSavedAudio.play();
 });
 
 savedFourGray.addEventListener('click', (event) => {
@@ -926,6 +1016,7 @@ savedFourGray.addEventListener('click', (event) => {
   savedFourGray.classList.add('hide')
   navBarFour.classList.add('hide')
   uploadFourFinal.classList.remove('hide')
+  hitSaveRightAudio.play();
 });
 
 uploadFourFinal.addEventListener('click', (event) => {
