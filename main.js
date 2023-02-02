@@ -129,6 +129,8 @@ var backgroundOne = document.querySelector(".background-one")
 var backgroundTwo = document.querySelector(".background-two")
 var backgroundThree = document.querySelector(".background-three")
 var backgroundFour = document.querySelector(".background-four")
+var secondScrollContainer = document.querySelector(".second-scroll-container")
+var screenWarning = document.querySelector(".screen-warning-container")
 
 function resetAll() {
   firstMovie.classList.add('hide')
@@ -214,6 +216,7 @@ function resetSecondSection(){
   secondBackground.src = "./assets/initial-two.png"
   firstDoorHighlight.classList.remove('hide')
   scrollArrow.style.top = "0px"
+  secondScrollContainer.classList.add('hide')
 }
 
 function resetThirdSection(){
@@ -757,6 +760,7 @@ configure.addEventListener('click', (event) => {
   wineHighlight.classList.remove('hide')
   wineHighlightDecoy.classList.remove('hide')
   colorContainerTwo.classList.remove('hide')
+  secondScrollContainer.classList.remove('hide')
   scrollDownAudio.play();
   setTimeout(() => {
     tryRRAudio.play();
@@ -1127,7 +1131,7 @@ function dragEnd(e) {
 function drag(e) {
   if (active) {
 
-    if (event.cancelable) event.preventDefault();
+    // if (event.cancelable) event.preventDefault();
 
     if (e.type === "touchmove") {
       currentX = e.touches[0].clientX - initialX;
@@ -1221,7 +1225,7 @@ function dragEndTwo(e) {
 function dragTwo(e) {
   if (activeTwo) {
 
-    if (event.cancelable) event.preventDefault();
+    // if (event.cancelable) event.preventDefault();
 
     if (e.type === "touchmove") {
       currentXTwo = e.touches[0].clientX - initialXTwo;
@@ -1250,4 +1254,22 @@ function setTranslateTwo(xPos, yPos, el) {
   if (xPos >= -189 && xPos <= 0) {
     el.style.transform = "translate3d(" + xPos + "px, " + 0 + "px, 0)";
   }
+}
+
+window.addEventListener('resize', function (event) {
+  if (window.innerWidth / window.innerHeight >= 1.44) {
+    //alert("You are now in portrait");
+     screenWarning.classList.add('hide')
+  } else {
+    screenWarning.classList.remove('hide')
+  }
+})
+
+if(window.innerWidth === 1366 && window.innerHeight === 1000 ||
+  window.innerWidth === 1366 && window.innerHeight === 950 ||
+  window.innerWidth === 1194 && window.innerHeight === 810 ||
+  window.innerWidth === 1194 && window.innerHeight === 760){
+  document.querySelector(".css").href = "ipad-landscape.css"
+} else {
+  document.querySelector(".css").href = "styles.css"
 }

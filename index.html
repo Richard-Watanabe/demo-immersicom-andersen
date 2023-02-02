@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <title>Andersen Digital Blueprint Experience</title>
-  <link href="./styles.css" rel="stylesheet">
+  <link class="css" href="./styles.css" rel="stylesheet">
   <link rel="shortcut icon" href="#">
 </head>
 
@@ -45,6 +45,12 @@
   <audio class="try-prairie" src="./assets/audio/TryPrairie.mp3"></audio>
   <audio class="try-rr" src="./assets/audio/TryRR.mp3"></audio>
   <audio class="try-second" src="./assets/audio/TrySecond.mp3"></audio>
+  <div class="screen-warning-container hide">
+    <div class="screen-warning">
+      Your screen width x height ratio
+      is too small to run this application
+    </div>
+  </div>
   <div class="movie-container">
     <video class="first-movie movie" playsinline src="./assets/AW_AR_Interactive_Video_1.mp4"></video>
     <video class="second-movie movie hide" playsinline src="./assets/AW_AR_Interactive_Video_2.mp4"></video>
@@ -53,15 +59,17 @@
     <video class="fourth-movie-half movie hide" playsinline src="./assets/AW_AR_Interactive_Video_5.mp4"></video>
     <video class="final-movie movie hide" playsinline src="./assets/AW_AR_Interactive_Video_6.mp4"></video>
   </div>
-  <div class="ui-container">
-    <img class="back ui-piece" src="./assets/back-icon.png" />
-    <img class="play ui-piece" src="./assets/play-icon.png" />
-    <img class="pause ui-piece hide" src="./assets/pause-icon.png" />
-    <img class="next ui-piece" src="./assets/next-icon.png" />
-    <img class="door-btn-one ui-piece" src="./assets/door-config-1.png" />
-    <img class="door-btn-two ui-piece" src="./assets/door-config-2.png" />
-    <img class="window-btn-one ui-piece" src="./assets/window-config-1.png" />
-    <img class="window-btn-two ui-piece" src="./assets/window-config-2.png" />
+  <div class="responsive-container">
+    <div class="ui-container">
+      <img class="back ui-piece" src="./assets/back-icon.png" />
+      <img class="play ui-piece" src="./assets/play-icon.png" />
+      <img class="pause ui-piece hide" src="./assets/pause-icon.png" />
+      <img class="next ui-piece" src="./assets/next-icon.png" />
+      <img class="door-btn-one ui-piece" src="./assets/door-config-1.png" />
+      <img class="door-btn-two ui-piece" src="./assets/door-config-2.png" />
+      <img class="window-btn-one ui-piece" src="./assets/window-config-1.png" />
+      <img class="window-btn-two ui-piece" src="./assets/window-config-2.png" />
+    </div>
   </div>
   <div class="one-back-container">
     <img class="background-ui" src="./assets/iPad-Background-UI.png" />
@@ -128,13 +136,16 @@
           <img class="upload-icon" src="./assets/upload-icon.png" />
         </div>
         <div class="color-container-two hide">
-          <div class="wine-highlight-decoy circle-highlight hide"></div>
-          <div class="wine-highlight circle-highlight hide"></div>
-          <div class="double-door-red-highlight circle-highlight hide"></div>
-          <div class="double-door-green-highlight circle-highlight hide"></div>
-          <div class="double-door-stains-highlight circle-highlight hide"></div>
-          <img class="color-background-two" src="./assets/default-color-two.png">
-          <img class="scroll-arrow hide" src="./assets/Scroll.png" />
+          <div class="second-scroll-container hide">
+              <img class="color-background-two" src="./assets/default-color-two.png">
+              <div class="wine-highlight circle-highlight hide"></div>
+                        <div class="wine-highlight-decoy circle-highlight hide"></div>
+                        <div class="double-door-red-highlight circle-highlight hide"></div>
+                        <div class="double-door-green-highlight circle-highlight hide"></div>
+                        <div class="double-door-stains-highlight circle-highlight hide"></div>
+                        <img class="scroll-arrow hide" src="./assets/Scroll.png" />
+          </div>
+
         </div>
         <div class="scroll-two hide">
           <div class="brown-door-selected door-selected hide"></div>

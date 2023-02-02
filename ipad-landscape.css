@@ -1,0 +1,1593 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+.background-one {
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  position: relative;
+  z-index: 2;
+  position: absolute;
+  width: 100vw;
+  height: 85vh;
+}
+
+.background-two{
+    -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  position: relative;
+  z-index: 2;
+  position: absolute;
+  width: 100vw;
+  height: 77vh;
+}
+
+.background-three{
+    -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  position: relative;
+  z-index: 2;
+  position: absolute;
+  width: 100vw;
+  height: 77vh;
+}
+
+.background-four{
+    -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  position: relative;
+  z-index: 2;
+  position: absolute;
+  width: 100vw;
+  height: 77vh;
+}
+
+.background-ui {
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  position: relative;
+  z-index: 2;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.one-back-container {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.movie-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  object-fit: contain;
+}
+
+.movie {
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.phone {
+  height: 100vh;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-two {
+  height: 100vh;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-three {
+  height: 100vh;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-four {
+  height: 100vh;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-screen {
+  background-color: transparent;
+  width: 324px;
+  height: 635px;
+  position: relative;
+  top: 10px;
+  z-index: 3;
+  border-radius: 20px;
+  left: 65px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.phone-screen-two {
+  background-color: transparent;
+  width: 327px;
+  height: 637px;
+  position: relative;
+  top: 6px;
+  z-index: 3;
+  border-radius: 20px;
+  left: -50px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.phone-screen-three {
+  background-color: transparent;
+  width: 322px;
+  height: 635px;
+  position: relative;
+  top: 6px;
+  z-index: 3;
+  border-radius: 20px;
+  left: -49px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.phone-screen-four {
+  background-color: transparent;
+  width: 325px;
+  height: 639px;
+  position: relative;
+  top: 17px;
+  z-index: 3;
+  border-radius: 20px;
+  left: -380px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.exterior-color-border {
+  height: 55px;
+  width: 87px;
+  position: absolute;
+  top: 175px;
+  left: 191px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@-webkit-keyframes borderBlink {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: #82AA6F
+  }
+}
+
+@keyframes borderBlink {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #82AA6F
+  }
+}
+
+@keyframes blink-animation {
+  50% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes blink-animation {
+   50% {
+    opacity: 0;
+  }
+}
+
+.borderBlink {
+  border: 2px solid #82AA6F;
+  height: 62px;
+  width: 102px;
+  position: absolute;
+  z-index: 8;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-animation: borderBlink 1s step-end infinite;
+  animation: borderBlink 1s step-end infinite;
+  background-color: transparent;
+}
+
+.first-door-highlight {
+  border: 2px solid #82AA6F;
+  height: 210px;
+  width: 183px;
+  position: absolute;
+  z-index: 8;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-animation: borderBlink 1s step-end infinite;
+  animation: borderBlink 1s step-end infinite;
+  background-color: transparent;
+  top: 116px;
+  left: 72px;
+}
+
+.initial-window-highlight {
+  border: 2px solid #82AA6F;
+  height: 443px;
+  width: 188px;
+  position: absolute;
+  z-index: 8;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-animation: borderBlink 1s step-end infinite;
+  animation: borderBlink 1s step-end infinite;
+  background-color: transparent;
+  top: 85px;
+  left: 73px;
+}
+
+.third-grille-highlight {
+  border: 2px solid #82AA6F;
+  height: 43.5px;
+  width: 52px;
+  position: absolute;
+  z-index: 8;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-animation: borderBlink 1s step-end infinite;
+  animation: borderBlink 1s step-end infinite;
+  background-color: transparent;
+}
+
+.interior-highlight {
+  border: 2px solid #82AA6F;
+  height: 43.5px;
+  width: 52px;
+  position: absolute;
+  z-index: 8;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-animation: borderBlink 1s step-end infinite;
+  animation: borderBlink 1s step-end infinite;
+  background-color: transparent;
+}
+
+.canvas-highlight {
+  top: 465px;
+  left: 76px;
+}
+
+.pine-highlight {
+  top: 465px;
+  left: 134.5px;
+}
+
+.white-interior-highlight {
+  top: 465px;
+  left: 16px;
+}
+
+.window-highlight {
+  border: 2px solid #82AA6F;
+  height: 143px;
+  width: 51px;
+  position: absolute;
+  z-index: 8;
+  cursor: pointer;
+  -webkit-animation: borderBlink 1s step-end infinite;
+  animation: borderBlink 1s step-end infinite;
+  background-color: transparent;
+}
+
+.black-window-highlight {
+  top: 442px;
+  left: 169px;
+}
+
+.white-window-highlight {
+  top: 440px;
+  left: 42px;
+}
+
+.gray-window-highlight {
+  top: 442.5px;
+  left: 106px;
+}
+
+.third-colonial-highlight {
+  top: 407.5px;
+  left: 270.5px;
+}
+
+.farmhouse-highlight {
+  top: 408px;
+  left: 73px;
+}
+
+.color-blink {
+  position: absolute;
+  z-index: 8;
+  top: 200px;
+  left: 221.5px;
+}
+
+.color-container {
+  position: absolute;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  overscroll-behavior-x: contain;
+  /* overflow:hidden; */
+}
+
+.second-container {
+  position: absolute;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  overscroll-behavior-x: contain;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.third-container {
+  position: absolute;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  overscroll-behavior-x: contain;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.fourth-container {
+  position: absolute;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  overscroll-behavior-x: contain;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.color-background {
+  position: absolute;
+  z-index: 6;
+  width: 100%;
+}
+
+.color-background-two {
+  position: absolute;
+  z-index: 6;
+  width: 100%;
+}
+
+.second-background {
+  position: absolute;
+  z-index: 6;
+  width: 100%;
+}
+
+.third-background {
+  position: absolute;
+  z-index: 6;
+  width: 100%;
+}
+
+.fourth-background {
+  position: absolute;
+  z-index: 6;
+  width: 100%;
+}
+
+.circle-highlight {
+  position: absolute;
+  background-color: transparent;
+  z-index: 6;
+  width: 44px;
+  height: 44px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  border: 2px solid #82AA6F;
+  -webkit-animation: borderBlink 1s step-end infinite;
+  animation: borderBlink 1s step-end infinite;
+}
+
+.grill-highlight {
+  position: absolute;
+  background-color: transparent;
+  z-index: 13;
+  width: 88px;
+  height: 89px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 2px solid #82AA6F;
+  -webkit-animation: borderBlink 1s step-end infinite;
+  animation: borderBlink 1s step-end infinite;
+}
+
+.door-highlight {
+  position: absolute;
+  background-color: transparent;
+  z-index: 13;
+  width: 122px;
+  height: 135px;
+  border: 2px solid #82AA6F;
+  -webkit-animation: borderBlink 1s step-end infinite;
+  animation: borderBlink 1s step-end infinite;
+}
+
+.door-selected {
+  position: absolute;
+  background-color: transparent;
+  z-index: 13;
+  width: 115px;
+  height: 134px;
+  border: 2px solid #82AA6F;
+}
+
+.brown-door-selected {
+  top: 17px;
+  left: 8px;
+}
+
+.door-three-selected {
+  top: 17px;
+  left: 255px;
+  width: 122px;
+  height: 136px;
+}
+
+.door-three-highlight {
+  top: 18px;
+  left: 255px;
+}
+
+.save-highlight {
+  position: absolute;
+  background-color: transparent;
+  z-index: 13;
+  width: 198px;
+  height: 46px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  border: 3px solid #82AA6F;
+  -webkit-animation: borderBlink 1s step-end infinite;
+  animation: borderBlink 1s step-end infinite;
+  top: 440px;
+  left: 65px;
+}
+
+.prairie-highlight {
+  top: 9px;
+  left: 105px;
+}
+
+.grill-selected {
+  position: absolute;
+  background-color: transparent;
+  z-index: 13;
+  width: 88px;
+  height: 89px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 2px solid #82AA6F;
+}
+
+.prairie-selected {
+  top: 8px;
+  left: 106px;
+}
+
+.modified-selected {
+  top: 4px;
+  left: 302px;
+}
+
+.modified-colonial-highlight {
+  top: 5px;
+  left: 302px;
+}
+
+.colonial-highlight {
+  top: 6px;
+  left: 204px;
+}
+
+.colonial-selected {
+  top: 6px;
+  left: 204px;
+}
+
+.black-highlight {
+  top: 469px;
+  left: 213px;
+}
+
+.wine-highlight-decoy {
+  top: 546px;
+  left: 213.5px;
+  z-index: 7;
+  opacity: 0;
+}
+
+.wine-highlight {
+  top: 158px;
+  left: 212px;
+  z-index: 7;
+}
+
+.double-door-red-highlight {
+  top: 158px;
+  left: 213px;
+  z-index: 7;
+}
+
+.double-door-green-highlight {
+  top: 200px;
+  left: 131px;
+  z-index: 7;
+}
+
+.double-door-stains-highlight {
+  top: 283px;
+  left: 11px;
+  z-index: 7;
+}
+
+.gray-highlight {
+  top: 388px;
+  left: 131.5px;
+}
+
+.stains-default-highlight {
+  top: 541px;
+  left: 10.5px;
+}
+
+.stains-walnut-highlight {
+  top: 540px;
+  left: 92.5px;
+}
+
+.red-arrow {
+  position: absolute;
+  z-index: 7;
+  top: 249.5px;
+  left: 301px;
+}
+
+.scroll-arrow {
+  position: absolute;
+  z-index: 7;
+  top: 0px;
+  left: 141px;
+  width: 40px;
+  height: 110px;
+  /* animation: blink-animation 2s steps(5, start) infinite;
+    -webkit-animation: blink-animation 2s steps(5, start) infinite; */
+}
+
+.red-arrow-div {
+  position: absolute;
+  z-index: 7;
+  width: 15px;
+  height: 20px;
+  animation: blink-animation 1s steps(1, start) infinite;
+  -webkit-animation: blink-animation 1s steps(1, start) infinite;
+}
+
+.full-icon {
+  position: absolute;
+  z-index: 7;
+  top: 140px;
+  left: 251px;
+}
+
+.full-icon-div {
+  position: absolute;
+  z-index: 7;
+  width: 70px;
+  height: 50px;
+  animation: blink-animation 1s steps(1, start) infinite;
+  -webkit-animation: blink-animation 1s steps(1, start) infinite;
+}
+
+.finish-div {
+  position: absolute;
+  z-index: 7;
+  top: 506px;
+  left: 226px;
+}
+
+.finish-icon {
+  position: absolute;
+  z-index: 7;
+  width: 80px;
+  height: 60px;
+  animation: blink-animation 1s steps(1, start) infinite;
+  -webkit-animation: blink-animation 1s steps(1, start) infinite;
+}
+
+.configure {
+  position: absolute;
+  z-index: 7;
+  top: 405px;
+  left: 239.5px;
+  width: 79px;
+  height: 20px;
+}
+
+.configure-img {
+  position: absolute;
+  z-index: 7;
+  width: 79px;
+  height: 20px;
+  animation: blink-animation 1s steps(1, start) infinite;
+  -webkit-animation: blink-animation 1s steps(1, start) infinite;
+}
+
+.configure-second {
+  position: absolute;
+  z-index: 7;
+  top: 400px;
+  left: 241px;
+}
+
+.configure-img-second {
+  position: absolute;
+  z-index: 7;
+  width: 79px;
+  height: 20px;
+  animation: blink-animation 1s steps(1, start) infinite;
+  -webkit-animation: blink-animation 1s steps(1, start) infinite;
+}
+
+.configure-four-div {
+  position: absolute;
+  z-index: 7;
+  top: 399px;
+  left: 212px;
+}
+
+.configure-four {
+  position: absolute;
+  z-index: 7;
+  width: 104px;
+  height: 20px;
+  animation: blink-animation 1s steps(1, start) infinite;
+  -webkit-animation: blink-animation 1s steps(1, start) infinite;
+}
+
+.saved {
+  position: absolute;
+  z-index: 7;
+  top: 410px;
+  left: 22px;
+}
+
+.saved-img {
+  position: absolute;
+  z-index: 7;
+  width: 53px;
+  height: 16px;
+  animation: blink-animation 1s steps(1, start) infinite;
+  -webkit-animation: blink-animation 1s steps(1, start) infinite;
+}
+
+.saved-four-div {
+  position: absolute;
+  z-index: 7;
+  top: 402px;
+  left: 23.5px;
+}
+
+.saved-four {
+  position: absolute;
+  z-index: 7;
+  width: 80px;
+  height: 16px;
+  animation: blink-animation 1s steps(1, start) infinite;
+  -webkit-animation: blink-animation 1s steps(1, start) infinite;
+}
+
+.saved-four-gray-div {
+  position: absolute;
+  z-index: 7;
+  top: 403px;
+  left: 21px;
+}
+
+.saved-four-gray {
+  position: absolute;
+  z-index: 7;
+  width: 87px;
+  height: 17px;
+  animation: blink-animation 1s steps(1, start) infinite;
+  -webkit-animation: blink-animation 1s steps(1, start) infinite;
+}
+
+.upload {
+  position: absolute;
+  z-index: 7;
+  top: 10px;
+  left: 277px;
+}
+
+.upload-icon {
+  position: absolute;
+  z-index: 7;
+  width: 25px;
+  height: 26px;
+  animation: blink-animation 1s steps(1, start) infinite;
+  -webkit-animation: blink-animation 1s steps(1, start) infinite;
+}
+
+.upload-four-div {
+  position: absolute;
+  z-index: 7;
+  top: 10.5px;
+  left: 274px;
+}
+
+.upload-four-icon {
+  position: absolute;
+  z-index: 7;
+  width: 27px;
+  height: 28px;
+  animation: blink-animation 1s steps(1, start) infinite;
+  -webkit-animation: blink-animation 1s steps(1, start) infinite;
+}
+
+.upload-four-div-final {
+  position: absolute;
+  z-index: 7;
+  top: 10.5px;
+  left: 274px;
+}
+
+
+.nav {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 6;
+}
+
+.nav-img {
+  position: absolute;
+  z-index: 6;
+  width: 645px;
+  top: 220px;
+  transition: transform 0.5s;
+  -webkit-animation-name: cssAnimation;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.grill-list {
+  overflow: hidden;
+  position: absolute;
+  z-index: 8;
+  width: 399px;
+  /* overflow: scroll; */
+  /* height: 130px;
+      left: -1px;
+      top: 374px; */
+}
+
+.door-list {
+  overflow: hidden;
+  position: absolute;
+  z-index: 6;
+  width: 520px;
+  /* overflow: scroll; */
+  /* height: 130px;
+      left: -1px;
+      top: 374px; */
+}
+
+@-webkit-keyframes cssAnimation {
+  from {
+    -webkit-transform: translate(0px);
+  }
+
+  to {
+    -webkit-transform: translate(-50%);
+  }
+}
+
+.grill-blink {
+  position: absolute;
+  z-index: 8;
+  top: 223px;
+  left: 215px;
+  width: 102px;
+}
+
+.scroll {
+
+  width: 390px;
+  height: 130px;
+  left: -1px;
+  top: 374px;
+  position: absolute;
+  z-index: 12;
+  background-color;
+  -webkit-overflow-scrolling: touch;
+  background-color: transparent;
+}
+
+.scroll-two {
+
+  width: 520px;
+  height: 155px;
+  left: -1px;
+  top: 432px;
+  position: absolute;
+  z-index: 12;
+  background-color;
+  -webkit-overflow-scrolling: touch;
+  background-color: transparent;
+}
+
+.door-list {
+  overflow: hidden;
+  position: absolute;
+  z-index: 6;
+  width: 520px;
+  /* overflow: scroll; */
+  /* height: 130px;
+      left: -1px;
+      top: 374px; */
+}
+
+.backpatch {
+  width: 400px;
+  height: 120px;
+  left: -1px;
+  position: absolute;
+  z-index: 5;
+  overflow-x: hidden;
+}
+
+.backpatch:-webkit-scrollbar {
+  display: none;
+}
+
+.nav-container {
+  overflow: hidden;
+}
+
+.nav-bar {
+  width: 350px;
+  height: 60px;
+  position: absolute;
+  z-index: 7;
+  top: 575px;
+  overflow: hidden;
+  right: -15px;
+}
+
+.nav-bar-two {
+  width: 350px;
+  height: 60px;
+  position: absolute;
+  z-index: 7;
+  top: 585px;
+  overflow: hidden;
+  right: -10px;
+}
+
+.nav-bar-four {
+  width: 350px;
+  height: 60px;
+  position: absolute;
+  z-index: 7;
+  top: 585px;
+  overflow: hidden;
+  right: -10px;
+}
+
+.color-container-two {
+  background-color: white;
+  width: 327px;
+  height: 420px;
+  position: relative;
+  top: 427px;
+  z-index: 6;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.ui-container{
+  position: absolute;
+  width:1366px;
+  height:1024px;
+}
+
+.ui-piece{
+  position:absolute;
+  z-index:20
+}
+
+.back{
+  width:58px;
+  left:22px;
+  bottom:49px;
+  opacity:0;
+}
+
+.play{
+   width:70px;
+  left:95px;
+  bottom:55px;
+}
+
+.pause{
+   width:70px;
+  left:95px;
+  bottom:55px;
+}
+
+.next{
+  width:58px;
+  left:180px;
+    bottom:49px;
+  opacity:0;
+}
+
+.door-btn-one{
+  height:53.5px;
+  left:286px;
+  bottom:45px;
+  opacity:0;
+}
+
+.door-btn-two{
+  height:53.5px;
+  left:556px;
+  bottom:45px;
+  opacity:0
+}
+
+.window-btn-one{
+  height:53.5px;
+  left:827px;
+  bottom:45px;
+  opacity:0
+}
+
+.window-btn-two{
+  height:53.5px;
+  left:1093px;
+  bottom:45px;
+  opacity:0
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (max-height: 990px) {
+  .ui-container{
+  width:1366px;
+  height:1005px;
+}
+.background-one {
+  height: 87vh;
+}
+
+.background-two{
+  height: 78vh;
+}
+
+.background-three{
+  height: 78vh;
+}
+
+.background-four{
+  height: 78vh;
+}
+}
+
+@media screen and (max-height: 840px) {
+
+.movie{
+bottom:8px;
+}
+
+  .ui-container{
+  position: absolute;
+  width:1194px;
+  height:834px;
+}
+
+  .play{
+    width:40px;
+    left:95px;
+    bottom:50px;
+  }
+
+  .pause{
+    width:40px;
+    left:95px;
+    bottom:50px;
+  }
+
+  .next{
+      width:48px;
+  left:158px;
+  opacity:0;
+  bottom:47px;
+  }
+
+  .back{
+          width:48px;
+  left:20px;
+  bottom:47px;
+  opacity:0;
+  }
+
+  .door-btn-one{
+    height:46px;
+    left:254px;
+    bottom:40px;
+  }
+
+  .door-btn-two{
+  height:46px;
+    left:489px;
+    bottom:40px;
+  }
+
+.window-btn-one{
+  height:46px;
+    left:724px;
+    bottom:40px;
+  }
+
+
+.window-btn-two{
+  height:46px;
+    left:957px;
+    bottom:40px;
+  }
+
+  .color-blink{
+  width: 88px;
+  height:57px;
+  top: 178px;
+  left: 192px;
+  }
+
+  .nav-bar{
+    width: 312px;
+  height: 50px;
+  right: -18px;
+  top: 518px;
+  }
+
+  .phone-screen{
+    width: 283px;
+    height: 570px;
+    left:58px;
+    top:4px;
+  }
+
+  .circle-highlight{
+    width: 39.5px;
+  height: 39.5px;
+  }
+
+  .black-highlight{
+    top: 409px;
+    left: 186px;
+  }
+
+  .gray-highlight{
+    top: 339px;
+    left: 115px;
+  }
+
+  .stains-default-highlight{
+    top: 472.5px;
+    left: 9.5px;
+  }
+
+  .stains-walnut-highlight{
+    top: 471.5px;
+    left: 80.5px;
+  }
+
+  .red-arrow-div{
+    width: 12px;
+    height: 19px;
+  }
+
+  .red-arrow{
+    top: 216px;
+    left: 264px;
+  }
+
+  .nav-img{
+     width: 580px;
+    top: 190px;
+  }
+
+  .grill-blink{
+    top: 192px;
+  left: 192px;
+  width: 90px;
+  height:57px;
+  }
+
+  .grill-list{
+    width: 350px;
+    top:-48px;
+    left:-1px;
+  }
+
+  .grill-highlight{
+    width:  79px;
+    height: 77px;
+  }
+
+  .backpatch{
+    top:323px;
+    z-index:7
+  }
+
+  .prairie-highlight{
+    top: -40px;
+  left: 90px;
+  }
+
+  .grill-selected{
+      width: 79px;
+  height: 77px;
+  }
+
+  .prairie-selected{
+     top: -40px;
+  left: 90px;
+  }
+
+  .modified-colonial-highlight{
+       top: -44px;
+  left: 263px;
+  }
+
+  .modified-selected{
+        top: -44px;
+  left: 263px;
+  }
+
+  .colonial-highlight{
+            top: -43px;
+  left: 178px;
+  }
+
+    .colonial-selected{
+            top: -43px;
+  left: 178px;
+  }
+
+  .full-icon {
+  top: 124px;
+  left: 221px;
+  }
+
+  .full-icon-div {
+  width: 57px;
+  height: 42px;
+  }
+  .save-highlight{
+    width: 174px;
+    height: 42px;
+    top: 383px;
+    left: 55px;
+  }
+
+  .first-door-highlight{
+    height: 184px;
+    width: 156px;
+    top: 98px;
+    left: 68px;
+  }
+
+    .phone-screen-two{
+    width: 288px;
+    height: 562px;
+    left: -44px;
+    top:4px;
+  }
+
+  .configure {
+    top: 356.5px;
+    left: 210.5px;
+  }
+
+  .configure-img {
+    width: 67px;
+    height: 17px;
+  }
+
+  .color-container-two{
+      width: 289px;
+  height: 400px;
+  top: 376px;
+  left:1px;
+
+  }
+
+  .scroll-arrow{
+    left: 130px;
+  width: 35px;
+  height: 100px;
+  top: -2px;
+  }
+
+  .wine-highlight{
+    top: 139px;
+  left: 187px;
+  }
+
+  .wine-highlight-decoy{
+    top: 513px;
+  left: 213.5px;
+  }
+
+  .nav-bar-two{
+     width: 290px;
+  height: 48px;
+  top: 514px;
+  right: -2px;
+  }
+
+  .saved {
+  top: 361px;
+  left: 20px;
+}
+
+  .saved-img{
+    width: 45px;
+    height: 14px;
+  }
+
+  .door-list{
+    width: 458px;
+    top:-50px;
+  }
+
+  .door-selected{
+    width: 100px;
+    height: 116px;
+  }
+
+  .brown-door-selected{
+    top: -34px;
+  left: 8px;
+  }
+
+  .door-highlight{
+    width: 108px;
+    height: 116px;
+  }
+
+  .door-three-highlight{
+    top: -34px;
+  left: 224px;
+  }
+
+  .door-three-selected{
+     top: -34px;
+    left: 224px;
+    width: 108px;
+  }
+
+  .configure-second {
+  top: 353px;
+  left: 213px;
+}
+
+.configure-img-second {
+  width: 67px;
+    height: 17px;
+}
+
+.double-door-red-highlight{
+  top: 139px;
+  left: 188px;
+}
+
+.double-door-green-highlight{
+  top: 176.5px;
+  left: 115.5px;
+}
+
+.double-door-stains-highlight{
+  top: 250.5px;
+  left: 9.5px;
+}
+
+.upload {
+  top: 8px;
+  left: 244px;
+}
+
+.upload-icon {
+  width: 23px;
+  height: 24px;
+}
+
+.third-grille-highlight{
+  height: 40px;
+  width: 46px;
+}
+
+.third-colonial-highlight{
+   top: 348px;
+  left: 236.5px;
+}
+
+.phone-screen-three{
+    width: 283px;
+  height: 535px;
+  left: -43px;
+  top: -6px;
+}
+
+.farmhouse-highlight{
+  top: 358px;
+  left: 64px;
+  height: 39px;
+  width: 47px;
+}
+
+.finish-div {
+  top: 449.5px;
+  left: 199px;
+}
+
+.finish-icon {
+  width: 68px;
+  height: 50px;
+}
+
+.initial-window-highlight{
+  height: 379px;
+  width: 164px;
+   top: 79px;
+  left: 68px;
+}
+
+.window-highlight{
+  height: 129px;
+  width: 46px;
+}
+
+.phone-screen-four{
+   width: 289px;
+  height: 570px;
+   left: -333px;
+    top: 15px;
+}
+
+.black-window-highlight{
+  top: 391.5px;
+  left: 150px;
+}
+
+.white-window-highlight{
+  top: 391.5px;
+  left: 37.5px;
+}
+
+.saved-four-div {
+  top: 357px;
+  left: 21.5px;
+}
+
+.saved-four {
+  width: 73px;
+  height: 15px;
+}
+
+.upload-four-div {
+  top: 9.5px;
+  left: 244px;
+}
+
+.upload-four-icon {
+  width: 23px;
+  height: 24px;
+}
+
+.gray-window-highlight{
+  top: 392.5px;
+  left: 93.5px;
+}
+
+.configure-four-div {
+  top: 354.5px;
+  left: 187px;
+}
+
+.configure-four {
+  width: 95px;
+  height: 18px;
+}
+
+.nav-bar-four{
+   width: 320px;
+  height: 55px;
+  top: 518px;
+  right: -15px;
+}
+
+.interior-highlight{
+  height: 38.5px;
+  width: 47.5px;
+}
+
+.canvas-highlight{
+  top: 413px;
+  left: 67px;
+}
+
+.pine-highlight{
+   top: 413.5px;
+  left: 119px;
+}
+
+.white-interior-highlight{
+  top: 413px;
+  left: 14.5px;
+}
+
+.saved-four-gray-div {
+  top: 358px;
+  left: 20px;
+}
+
+.saved-four-gray {
+  width: 76px;
+  height: 15px;
+}
+
+.upload-four-div-final {
+  top: 10.5px;
+  left: 244px;
+}
+
+.background-one {
+  height: 92vh;
+}
+
+.background-two{
+  height: 83vh;
+}
+
+.background-three{
+  height: 83vh;
+}
+
+.background-four{
+  height: 83vh;
+}
+
+.color-blink{
+  top:187px;
+}
+
+.first-door-highlight{
+  top: 105px;
+}
+
+.third-colonial-highlight{
+  top:355px;
+}
+
+.initial-window-highlight{
+  top:86px;
+}
+
+.gray-window-highlight{
+  top:396px;
+}
+
+}
+
+@media screen and (max-height: 790px) {
+  .ui-container{
+  width:1194px;
+  height:818px;
+}
+
+.background-one {
+  height: 92vh;
+}
+
+.background-two{
+  height: 83vh;
+}
+
+.background-three{
+  height: 83vh;
+}
+
+.background-four{
+  height: 83vh;
+}
+
+.color-blink{
+  top:187px;
+}
+
+.first-door-highlight{
+  top: 105px;
+}
+
+.third-colonial-highlight{
+  top:355px;
+}
+
+.initial-window-highlight{
+  top:86px;
+}
+
+.gray-window-highlight{
+  top:396px;
+}
+}
